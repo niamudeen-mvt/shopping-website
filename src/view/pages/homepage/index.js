@@ -6,6 +6,7 @@ import FeaturedProducts from '../../../components/featured'
 import ImgaeGallery from '../../../components/gallery'
 import ContentBar from '../../../components/ContentBar'
 import TestimonialSection from '../../../components/testimonial'
+import CategorySection from '../../../components/category'
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
       <ContentBar />
       <FeaturedProducts />
       <TestimonialSection />
+      <CategorySection />
       <ImgaeGallery />
 
     </>
