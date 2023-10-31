@@ -19,7 +19,7 @@ const ContentSection = ({ heading }) => {
 const DropCollection = () => {
   return (
     <Box className='common_section'>
-      <Container className='drop_section_container'>
+      <Container className='common_section_height'>
         <div className='text_center'>
           <Typography variant='h3'>The Drops Collection</Typography>
           <Typography variant='subtitle2'>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</Typography>

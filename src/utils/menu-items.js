@@ -3,7 +3,7 @@ import BestSellerPage from "../view/pages/best-seller";
 import ContactPage from "../view/pages/contact";
 import FaqPage from "../view/pages/faq";
 import Homepage from "../view/pages/homepage";
-import NewArrivalPage from "../view/pages/new-arrival";
+import NewArrivalPage from "../components/new-arrival";
 import ReviewPage from "../view/pages/review";
 import ShopPage from "../view/pages/shop";
 
