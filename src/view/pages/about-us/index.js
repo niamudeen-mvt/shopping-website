@@ -1,8 +1,9 @@
-import React from 'react'
+import CommonBanner from "../../../components/banner/CommonBanner"
+
 
 const AboutUsPage = () => {
   return (
-    <div>AboutUsPage</div>
+    <CommonBanner />
   )
 }
 

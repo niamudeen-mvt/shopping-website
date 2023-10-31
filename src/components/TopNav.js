@@ -38,8 +38,10 @@ const TopNav = () => {
             </Stack>
           </Box>
 
-          <CustomDropdownMenu />
-          <CustomDropdownMenu />
+          <Stack direction={'row'} spacing={2}>
+            <CustomDropdownMenu selectedValue='English' />
+            <CustomDropdownMenu selectedValue='USD' />
+          </Stack>
         </Toolbar>
       </Container>
     </Box >

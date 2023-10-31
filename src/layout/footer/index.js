@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import EmailIcon from '@mui/icons-material/Email';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import americaFlagIcon from "../../assets/icons/america-flag-icon.svg"
+
 
 const FooterSection = () => {
   const footerQuickLinks = [
@@ -22,7 +24,7 @@ const FooterSection = () => {
   ]
   return (
     <Box className="footer_section common_section_margin ">
-      <Container className='footer_container '>
+      <Container className='footer_container'>
         <Typography className='footer_heading  text_center '>
           Fast shipping times! if any information regarding shipping times or order tracking please email us. we will <br /> respond within one business day
         </Typography>
@@ -84,25 +86,21 @@ const FooterSection = () => {
               <Typography variant='body2' mb={3}>
                 Enter your email below to be the first to know about new collections and product launches.
               </Typography>
-              <Stack direction="row" spacing={3} className='flexV' sx={{ bgcolor: 'white' }}>
-                <Box >
-                  <EmailIcon />
-                </Box>
-                <TextField placeholder="Enter your email" className='footer_input' />
-                <Box>
-                  <ArrowForwardIcon />
-                </Box>
-              </Stack>
             </Box>
           </Grid>
         </Grid>
       </Container>
       <Box>
-        <Container className=''>
+        <Container >
           <Grid container spacing={2} mt={5} className=''>
             <Grid item xs={12} md={4}>
               <Stack direction={'row'} spacing={2}>
-                <EmailIcon /><EmailIcon /><EmailIcon /><EmailIcon /><EmailIcon /><EmailIcon /><EmailIcon />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
+                <img src={americaFlagIcon} alt="america-flag-icon" />
               </Stack>
 
             </Grid>
@@ -124,7 +122,7 @@ const FooterSection = () => {
           </Grid>
         </Container>
       </Box>
-    </Box>
+    </Box >
   )
 }
 

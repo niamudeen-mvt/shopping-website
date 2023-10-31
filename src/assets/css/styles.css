@@ -47,6 +47,12 @@ p {
   text-align: left;
 }
 
+select {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
 .common_section_heading {
   font-family: Jost;
   font-size: 30px !important;
@@ -135,7 +141,6 @@ img {
 
 .top_nav {
   min-height: 44px !important;
-  background-color: var(--black-clr);
 }
 
 .navbar {
@@ -149,6 +154,7 @@ img {
 
 .banner_section {
   background-color: var(--banner-clr);
+  padding-left: 356px;
 }
 
 .banner_section .title_heading {
@@ -269,4 +275,12 @@ img {
 }
 .footer_section .footer_link {
   color: var(--white-clr);
+}
+
+.common_banner_section {
+  min-height: 284px;
+  background-image: url("../images/common-banner-section.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
