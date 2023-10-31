@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-clr: white;
+  --black-clr: #000000;
+}
+
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black-clr);
+}
+
+.red {
+  background-color: red !important;
+}
+.green {
+  background-color: green !important;
+}
+.yellow {
+  background-color: yellow !important;
+}
+.blue {
+  background-color: blue !important;
+}
+
+select {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: transparent;
+}
+.bg_black {
+  background-color: #000000;
+}
+
+.font_jost_16f_400w {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.12px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.css-to4x1n-MuiBadge-badge {
+  background-color: black !important;
+}
+
+/* ===================== flex classes ========= */
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_SB {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex_end {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.section {
+  box-shadow: none !important;
+}
+
+/* ==================== top nav ================= */
+.top_nav {
+  background-color: var(--black-clr) !important;
+  color: var(--white-clr) !important;
+  min-height: 44px !important;
+}
+
+.top_nav .content_section span {
+  color: red;
+}
+.top_nav .icon_section,
+.top_nav .dropdown_section {
+  display: flex;
+  gap: 30px;
+}
+
+.primary_navbar {
+  background-color: var(--white-clr) !important;
+  color: var(--black-clr) !important;
+  box-shadow: none !important;
+  min-height: 99px !important;
+}
+.primary_navbar .navbar_menu ul {
+  display: flex;
+  gap: 50px;
+}
+
+/* =================== banner section ============ */
+.banner_section {
+  width: 100%;
+  min-height: 745px;
+  background-color: #e7e5e1;
+}
