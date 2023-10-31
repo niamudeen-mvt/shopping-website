@@ -181,7 +181,7 @@ img {
 }
 
 .theme_btn {
-  width: 155px;
+  /* width: 155px; */
   height: 46px;
   flex-shrink: 0;
   background: #4175bd !important;
@@ -230,4 +230,28 @@ img {
   background-position: center;
   background-attachment: fixed;
   min-height: 610px;
+}
+
+/* ================= TESTIMONIAL SECTION ================== */
+.testimonial_section {
+  padding: 74px 0;
+  min-height: 747px;
+  background-color: #f8f1ed;
+}
+
+.testimonial_section .testmonial_card {
+  background-color: white;
+  max-width: 388px;
+  min-height: 358px;
+  padding: 41px 31px;
+  display: grid;
+  gap: 17px;
+}
+
+.testimonial_section .testmonial_card .feeback {
+  font-family: Jost;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 30px;
+  color: #333333;
 }

@@ -30,24 +30,6 @@ export const NewArrivalCard = ({ product }) => {
           </Stack>
         </Stack>
       </Box>
-      {/* <CardContent className="product_image_section border">
-        <img src={product?.image} alt="product-image" />
-      </CardContent>
-      <Stack >
-        <Rating name="read-only" value={product?.rating?.rate} readOnly size="small" />
-        <Typography variant="subititle1">
-          {product?.title}
-        </Typography>
-        <Stack direction='row' spacing={3}>
-          <Typography variant="body1">
-            ${product?.price}
-          </Typography>
-          <Typography variant="body1">
-            ${product?.price}
-          </Typography>
-        </Stack>
-
-      </Stack> */}
     </Card >
   )
 }
