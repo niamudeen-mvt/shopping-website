@@ -1,4 +1,4 @@
-import { Card, CardContent, Box, Typography, Rating, Stack } from "@mui/material";
+import { Card, CardContent, Box, Typography, Rating, Stack, Badge } from "@mui/material";
 
 
 
@@ -8,8 +8,8 @@ import { Card, CardContent, Box, Typography, Rating, Stack } from "@mui/material
 export const NewArrivalCard = ({ product }) => {
   console.log(product, "product");
   return (
-    <Card className="product_card">
-      <Box className=" top_content flex_center">
+    <Card className="product_card ">
+      <Box className="top_content flex_center" mb={2}>
         <CardContent className="">
           <img src={product?.image} alt="product-image" />
         </CardContent>

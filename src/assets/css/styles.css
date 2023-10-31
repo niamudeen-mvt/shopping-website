@@ -17,6 +17,7 @@
   --banner-clr: #e7e5e1;
   --deault-container-width: 91%;
   --inner-contianer-width: 62%;
+  --light-grey: #d9d9d9;
 }
 
 body {
@@ -190,6 +191,7 @@ img {
 }
 .product_card .top_content {
   height: 370px;
+  border: 1px solid var(--light-grey);
 }
 
 .product_card .top_content img {
@@ -211,5 +213,5 @@ img {
 }
 
 .product_card .product_defult_price {
-  color: #d9d9d9;
+  color: var(--light-grey);
 }
