@@ -172,16 +172,19 @@ img {
 
 /* ===================== DROP COLLECTION ================ */
 
-.rounded_btn {
-  width: 155px;
-  height: 46px;
-  flex-shrink: 0;
-  background: #4175bd !important;
+.border_radius_26 {
   border-radius: 26.5px !important;
   -webkit-border-radius: 26.5px !important;
   -moz-border-radius: 26.5px !important;
   -ms-border-radius: 26.5px !important;
   -o-border-radius: 26.5px !important;
+}
+
+.theme_btn {
+  width: 155px;
+  height: 46px;
+  flex-shrink: 0;
+  background: #4175bd !important;
 }
 
 /* =================== PRODUCT_CARD================= */
@@ -214,4 +217,17 @@ img {
 
 .product_card .product_defult_price {
   color: var(--light-grey);
+}
+.image_gallery_img {
+  width: 287px !important;
+  height: 287px !important;
+}
+
+/* =============== CONTENT BAR SECTION ======== */
+.content_bar_section {
+  background-image: url("../images/content-bar-section-img.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 610px;
 }

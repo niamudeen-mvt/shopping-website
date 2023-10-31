@@ -15,7 +15,7 @@ const NewArrivalPage = () => {
 
   return (
     <Box className="common_section_margin">
-      <Container className=''>
+      <Container >
         <div className='text_center'>
           <Typography className='common_section_heading text_center'>New Arrivals</Typography>
           <Typography variant='body1' className='text_center'>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</Typography>

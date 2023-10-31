@@ -11,7 +11,7 @@ const ContentSection = ({ heading }) => {
     <div className='text_center '>
       <Typography variant='subtitle1' mb={1}>{heading}</Typography>
       <Typography variant='body1' mb={2} className=' text_center'>You just want something new to spice up<br /> your door</Typography>
-      <Button variant='contained' className='rounded_btn' mb={1}>Shop Now</Button>
+      <Button variant='contained' className='theme_btn border_radius_26' mb={1}>Shop Now</Button>
     </div>
   )
 }
