@@ -7,9 +7,9 @@ const MainLayout = ({ children }) => {
     <>
       <TopNav />
       <Header />
-      {/* <main>
+      <main>
         {children}
-      </main> */}
+      </main>
     </>
 
   )

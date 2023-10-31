@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Jost:wght@400;500;600;700;800&family=Urbanist:wght@500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  box-shadow: none !important;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 :root {
@@ -10,7 +14,13 @@
   --sky-blue-clr: #4b9ad5;
   --dark-blue-clr: #3a5cac;
   --light-blue-clr: #4175bd;
+  --banner-clr: #e7e5e1;
   --deault-container-width: 91%;
+  --inner-contianer-width: 62%;
+}
+
+body {
+  font-family: "Jost", sans-serif !important;
 }
 
 ul {
@@ -32,8 +42,28 @@ p {
   text-align: left;
 }
 
+/* =============== default classes ============ */
+.border {
+  border: 2px solid red !important;
+}
+
 .default_black {
   background-color: var(--black-clr) !important;
+}
+
+.text_center {
+  text-align: center;
+}
+.common_section {
+  margin-top: 71px !important;
+  min-height: 745px;
+}
+.common_section_height {
+  min-height: 745px;
+}
+.inner_container_width {
+  max-width: var(--inner-contianer-width) !important;
+  padding: 0 !important;
 }
 
 /* ===================== container ================== */
@@ -45,10 +75,19 @@ p {
   cursor: pointer !important;
 }
 
+img {
+  max-width: 100% !important;
+  /* height: auto !important; */
+}
+
 /* ===================== flex classes ========= */
 .flex_center {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.flexV {
+  display: flex;
   align-items: center;
 }
 
@@ -69,21 +108,61 @@ p {
   justify-content: end;
   align-items: center;
 }
-.section {
-  box-shadow: none !important;
-}
+
 .top_nav {
   min-height: 44px !important;
   background-color: var(--black-clr);
 }
 
 .navbar {
-  box-shadow: none !important;
   background-color: var(--white-clr) !important;
 }
 .navbar .nav_link {
-  font-family: Jost;
   font-size: 16px;
   font-weight: 400;
   line-height: 23px;
+}
+
+.banner_section {
+  background-color: var(--banner-clr);
+}
+
+.banner_section .title_heading {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.banner_section .main_heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px !important;
+}
+
+.banner_section .sub_heading {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 44px !important;
+}
+
+.banner_section .shop_now_btn {
+  width: 175px;
+  height: 53px;
+}
+
+/* ===================== DROP COLLECTION ================ */
+.drop_section_container {
+  max-width: var(--inner-contianer-width);
+}
+
+.rounded_btn {
+  width: 155px;
+  height: 46px;
+  flex-shrink: 0;
+  background: #4175bd !important;
+  border-radius: 26.5px !important;
+  -webkit-border-radius: 26.5px !important;
+  -moz-border-radius: 26.5px !important;
+  -ms-border-radius: 26.5px !important;
+  -o-border-radius: 26.5px !important;
 }

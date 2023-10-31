@@ -19,7 +19,7 @@ const Header = () => {
         {/* ================= navbar ================== */}
         <Toolbar className='navbar' >
           <Box sx={{ flexGrow: 1 }}>
-            <a className='brand_logo'>
+            <a className='brand_logo' href='#'>
               <img src={brandLogo} alt='brand-logo' />
             </a>
           </Box>
@@ -29,7 +29,7 @@ const Header = () => {
                 menuItems?.length ?
                   menuItems?.map(e => {
                     return (
-                      <NavLink to={e?.url} className={routeName === e?.url ? 'nav_link cursor active' : 'nav_link cursor'}>
+                      <NavLink key={e?.id} to={e?.url} className={routeName === e?.url ? 'nav_link cursor active' : 'nav_link cursor'}>
                         {e?.title}
                       </NavLink>
                     )

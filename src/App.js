@@ -11,7 +11,7 @@ function App() {
             menuItems?.length ?
               menuItems?.map(e => {
                 return (
-                  <Route path={e?.url} element={e?.element} />
+                  <Route key={e?.id} path={e?.url} element={e?.element} />
                 )
               }) : null
           }

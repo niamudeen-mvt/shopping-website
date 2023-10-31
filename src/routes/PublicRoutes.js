@@ -1,7 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MainLayout from '../layout'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 const PublicRoutes = ({ children }) => {
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    navigate("/home")
+  }, [])
   return (
     <MainLayout>
       <Outlet>

@@ -1,22 +1,31 @@
 import React from 'react'
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
-import { Container } from '@mui/material';
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import bannerSectionImg from "../../assets/images/banner-section-img.png"
+
 
 const BannerSection = () => {
-  const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
   return (
-    <section className="banner_section">
-    </section>
+    <Box className="banner_section">
+      <Container className='inner_container_width '>
+        <Grid container className=' common_section_height'>
+          <Grid item xs={12} md={6} className=' flex_start'>
+            <Stack spacing={2} className=''>
+              <Typography className='title_heading'>New Arrivals</Typography>
+              <Typography className='main_heading'>Shockwave <br /> Protection Case</Typography>
+              <Typography className='sub_heading'>You just want something new to spice<br />up your door</Typography>
+              <Button variant='contained' color='default' className='shop_now_btn' disableFocusRipple>Shop Now</Button>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={6} className='flex_start'>
+            <div className=''>
+              <img src={bannerSectionImg} alt='banner-section-img' />
+
+            </div>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   )
 }
 
-export default BannerSection 
+export default BannerSection
