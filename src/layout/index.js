@@ -1,16 +1,15 @@
 import React from 'react'
-import TopNav from '../components/navbar/TopNav'
-import PrimaryNavbar from '../components/navbar'
-import { Container } from '@mui/material'
+import Header from '../components/navbar'
+import TopNav from '../components/TopNav'
 
 const MainLayout = ({ children }) => {
   return (
     <>
       <TopNav />
-      <PrimaryNavbar />
-      <main>
+      <Header />
+      {/* <main>
         {children}
-      </main>
+      </main> */}
     </>
 
   )

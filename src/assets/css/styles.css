@@ -7,6 +7,10 @@
 :root {
   --white-clr: white;
   --black-clr: #000000;
+  --sky-blue-clr: #4b9ad5;
+  --dark-blue-clr: #3a5cac;
+  --light-blue-clr: #4175bd;
+  --deault-container-width: 91%;
 }
 
 ul {
@@ -19,42 +23,26 @@ a {
   text-decoration: none;
   color: var(--black-clr);
 }
-
-.red {
-  background-color: red !important;
-}
-.green {
-  background-color: green !important;
-}
-.yellow {
-  background-color: yellow !important;
-}
-.blue {
-  background-color: blue !important;
-}
-
-select {
-  border: none;
-  outline: none;
-  color: white;
-  background-color: transparent;
-}
-.bg_black {
-  background-color: #000000;
-}
-
-.font_jost_16f_400w {
-  font-size: 16px;
+p {
+  font-family: Jost;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 23.12px;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
-.container {
-  max-width: 90%;
-  margin: 0 auto;
+.default_black {
+  background-color: var(--black-clr) !important;
 }
-.css-to4x1n-MuiBadge-badge {
-  background-color: black !important;
+
+/* ===================== container ================== */
+.container {
+  max-width: var(--deault-container-width) !important;
+}
+
+.cursor {
+  cursor: pointer !important;
 }
 
 /* ===================== flex classes ========= */
@@ -84,37 +72,18 @@ select {
 .section {
   box-shadow: none !important;
 }
-
-/* ==================== top nav ================= */
 .top_nav {
-  background-color: var(--black-clr) !important;
-  color: var(--white-clr) !important;
   min-height: 44px !important;
+  background-color: var(--black-clr);
 }
 
-.top_nav .content_section span {
-  color: red;
-}
-.top_nav .icon_section,
-.top_nav .dropdown_section {
-  display: flex;
-  gap: 30px;
-}
-
-.primary_navbar {
-  background-color: var(--white-clr) !important;
-  color: var(--black-clr) !important;
+.navbar {
   box-shadow: none !important;
-  min-height: 99px !important;
+  background-color: var(--white-clr) !important;
 }
-.primary_navbar .navbar_menu ul {
-  display: flex;
-  gap: 50px;
-}
-
-/* =================== banner section ============ */
-.banner_section {
-  width: 100%;
-  min-height: 745px;
-  background-color: #e7e5e1;
+.navbar .nav_link {
+  font-family: Jost;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
 }
