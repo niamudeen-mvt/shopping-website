@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 
-const CommonContainer = ({ children }) => {
-  return <Container maxWidth={"xl"}>{children}</Container>;
+const CommonContainer = ({ maxWidth = "xl", children }) => {
+  return <Container maxWidth={maxWidth}>{children}</Container>;
 };
 
 export default CommonContainer;

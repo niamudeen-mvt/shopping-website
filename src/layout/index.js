@@ -1,5 +1,5 @@
 import React from 'react'
-import FooterSection from './footer'
+import FooterSection from '../components/footer/index'
 import PrimaryNavbar from '../components/navbar/PrimaryNavbar'
 import TopNavbar from '../components/navbar/TopNavbar'
 
