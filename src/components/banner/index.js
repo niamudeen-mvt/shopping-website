@@ -1,25 +1,39 @@
 import React from 'react'
-import { Box, Button, Grid, Stack, Typography } from '@mui/material'
-import bannerSectionImg from "../../assets/images/banner-section-img.png"
+import { Box, Grid, Typography, Stack } from '@mui/material';
 
+import bannerImage from "../../assets/images/banner-section-img.png"
+import CustomButton from '../buttons';
 
 const BannerSection = () => {
+
   return (
-    <Box className="banner_section">
-      <Grid container className='common_section_height'>
-        <Grid item xs={12} md={4} className='flex_start'>
-          <Stack spacing={2} className=''>
-            <Typography className='title_heading'>New Arrivals</Typography>
-            <Typography className='main_heading'>Shockwave <br /> Protection Case</Typography>
-            <Typography className='sub_heading'>You just want something new to spice<br />up your door</Typography>
-            <Button variant='contained' color='default' className='shop_now_btn' disableFocusRipple>Shop Now</Button>
+    <Grid container sx={{ minHeight: "500px", bgcolor: "#E7E5E1" }} >
+      <Grid item xs={12} md={6} >
+        <Box height="100%" width="100%" display="flex" justifyContent="center" alignItems="center">
+          <Stack
+            direction="column"
+            justifyContent="left"
+            spacing={2}
+          >
+            <Typography variant="h5" fontStyle={'normal'} fontWeight={400} >
+              New Arrivals
+            </Typography>
+            <Typography variant="h3" fontWeight={700}>
+              Shockwave Protection <br /> Case
+            </Typography>
+            <Typography variant="h5" textTransform={'capitalize'} fontStyle={'normal'} fontWeight={400} >
+              You just want something new to spice up <br /> your door
+            </Typography>
+            <CustomButton text="shop now" />
           </Stack>
-        </Grid>
-        <Grid item xs={12} md={8} >
-          <img src={bannerSectionImg} alt='banner-section-img' />
-        </Grid>
+        </Box>
       </Grid>
-    </Box >
+      <Grid item xs={12} md={6} >
+        <Box height="100%" width="100%" >
+          <img src={bannerImage} alt="img" height="100%" width="100%" style={{ objectFit: 'contain' }} />
+        </Box>
+      </Grid>
+    </Grid>
   )
 }
 
