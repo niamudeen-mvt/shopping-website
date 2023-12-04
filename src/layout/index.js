@@ -1,12 +1,12 @@
 import React from 'react'
-import TopNav from '../components/TopNav'
 import FooterSection from './footer'
-import PrimaryNavbar from '../components/navbar'
+import PrimaryNavbar from '../components/navbar/PrimaryNavbar'
+import TopNavbar from '../components/navbar/TopNavbar'
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <TopNav />
+      <TopNavbar />
       <PrimaryNavbar />
       <main>
         {children}

@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react'
 import MainLayout from '../layout'
 import { Outlet, useNavigate } from 'react-router-dom'
-const PublicRoutes = ({ children }) => {
 
+
+
+
+
+const PublicRoutes = ({ children }) => {
   const navigate = useNavigate()
 
   useEffect(() => {

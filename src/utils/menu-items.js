@@ -6,6 +6,7 @@ import Homepage from "../view/pages/homepage";
 import NewArrivalPage from "../components/new-arrival";
 import ReviewPage from "../view/pages/review";
 import ShopPage from "../view/pages/shop";
+import CollectionPage from "../view/pages/collection";
 
 export const menuItems = [
   {
@@ -55,6 +56,12 @@ export const menuItems = [
     title: 'Contact',
     url: '/contact',
     element: <ContactPage />
+  },
+  {
+    id: 'collection',
+    title: 'Collection',
+    url: '/collection-page',
+    element: <CollectionPage />
   },
 
 ]
