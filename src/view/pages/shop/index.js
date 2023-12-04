@@ -1,14 +1,17 @@
 import React from "react";
 import CustomCommonBanner from "../../../components/shared/CustomCommonBanner";
-import CustomFeaturedSection from "../../../components/shared/CustomFeaturedSection";
 import CustomDrops from "../../../components/shared/CustomDrops";
 import CustomCategories from "../../../components/shared/CustomCategoires";
+import CustomFeaturedProducts from "../../../components/shared/CustomFeaturedProducts";
+import CommonContainer from "../../../components/container";
 
 const ShopPage = () => {
   return (
     <>
       <CustomCommonBanner />
-      <CustomFeaturedSection showDropDown={true} />
+      <CommonContainer maxWidth="lg">
+        <CustomFeaturedProducts showDropDown={true} />
+      </CommonContainer>
       <CustomCategories border={true} />
       <CustomDrops />
     </>

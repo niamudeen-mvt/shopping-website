@@ -1,39 +1,18 @@
-import React, { useEffect, useState } from "react";
-import { Box, Container, Grid, Rating, Typography } from "@mui/material";
-import { NewArrivalCard } from "../../components/cards/index";
-import { newArrivalProductsList } from "../../services/api/product-api";
+import { Box } from "@mui/material";
 import CommonHeadingBox from "../shared/CommonHeadingBox";
+import CommonContainer from "../container";
+import CustomFeaturedProducts from "../shared/CustomFeaturedProducts";
 
 const FeaturedProducts = () => {
-  const [productList, setProductList] = useState([]);
-  let searchResultCount = 8;
-  useEffect(() => {
-    (async () => {
-      const data = await newArrivalProductsList(searchResultCount);
-      setProductList(data);
-    })();
-  }, []);
-
   return (
     <Box className="common_section_margin">
-      <Container className="">
-        <CommonHeadingBox
-          heading="Featured Product"
-          subheading="consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-            labore"
+      <CommonContainer maxWidth="lg">
+        <CommonHeadingBox heading="Featured Product" />
+        <CustomFeaturedProducts
+          searchResultCount={8}
+          heading={"Featured Product"}
         />
-        <Grid container mt={4} spacing={3}>
-          {productList?.length
-            ? productList?.map((product, index) => {
-                return (
-                  <Grid key={index} item md={3} xs={12}>
-                    <NewArrivalCard product={product} />
-                  </Grid>
-                );
-              })
-            : "No Products"}
-        </Grid>
-      </Container>
+      </CommonContainer>
     </Box>
   );
 };

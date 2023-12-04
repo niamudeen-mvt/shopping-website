@@ -12,6 +12,9 @@ const CustomButton = ({
   textStyle = "uppercase",
   fontSize,
   fontWeight,
+  lineHeight,
+  letterSpacing,
+  border,
 }) => {
   return (
     <Button
@@ -22,7 +25,7 @@ const CustomButton = ({
         color: textColor,
         backgroundColor: bgColor,
         marginBottom: mb,
-        border: "1px solid #D9D9D9",
+        border: border ? "1px solid #D9D9D9" : "none",
         borderRadius: borderRadius,
         "&:hover": {
           backgroundColor: bgColor, // Set the desired hover color here
@@ -31,6 +34,8 @@ const CustomButton = ({
         fontSize: fontSize,
         fontWeight: fontWeight,
         fontStyle: "normal",
+        lineHeight: lineHeight ? lineHeight : "",
+        letterSpacing: letterSpacing ? letterSpacing : "",
       }}
     >
       {text}
