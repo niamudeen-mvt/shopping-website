@@ -47,11 +47,11 @@ p {
   text-align: left;
 }
 
-select {
+/* select {
   border: none;
   background-color: transparent;
   color: white;
-}
+} */
 
 .common_section_heading {
   font-family: Jost;
@@ -298,4 +298,10 @@ img {
 
 .b1 {
   border: 1px solid black;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }

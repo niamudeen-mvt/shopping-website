@@ -3,6 +3,7 @@ import ContactPage from "../view/pages/contact";
 import Homepage from "../view/pages/homepage";
 import CollectionPage from "../view/pages/collection";
 import ProductPage from "../view/pages/product";
+import ShopPage from "../view/pages/shop";
 // import NewArrivalPage from "../components/new-arrival";
 // import ReviewPage from "../view/pages/review";
 // import ShopPage from "../view/pages/shop";
@@ -29,11 +30,17 @@ export const menuItems = [
     element: <CollectionPage />
   },
   {
-    id: 'product',
-    title: 'Product',
-    url: '/product-page',
-    element: <ProductPage />
+    id: 'shop',
+    title: 'Shop',
+    url: '/shop',
+    element: <ShopPage />
   },
+  // {
+  //   id: 'product',
+  //   title: 'Product',
+  //   url: '/product-page',
+  //   element: <ProductPage />
+  // },
   {
     id: 'contact',
     title: 'Contact',

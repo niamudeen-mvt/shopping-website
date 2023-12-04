@@ -3,14 +3,13 @@ import {
   Container,
   Grid,
   Typography,
-  Pagination,
-  Stack,
-  useTheme,
 } from "@mui/material";
 import React from "react";
 import defaultImg from "../../../assets/images/Accessories-img.png";
 import CustomCommonBanner from "../../../components/shared/CustomCommonBanner";
 import CustomCategories from "../../../components/shared/CustomCategoires";
+import CustomPagination from "../../../components/shared/CustomPagination";
+import CustomDrops from "../../../components/shared/CustomDrops";
 
 const collections = [
   {
@@ -57,8 +56,6 @@ const collections = [
 
 
 const CollectionPage = () => {
-  const theme = useTheme();
-  console.log(theme);
   return (
     <>
       <CustomCommonBanner />
@@ -84,36 +81,11 @@ const CollectionPage = () => {
               );
             })}
           </Grid>
-          <Stack spacing={2} marginTop={8} className="flex_center">
-            <Pagination count={3} hidePrevButton />
-          </Stack>
+          <CustomPagination />
         </Container>
       </Box>
-      <CustomCategories border />
-      <Box mb={10}>
-        <Container maxWidth="lg">
-          <Typography
-            variant="h4"
-            mb={6}
-            textAlign="center"
-            fontWeight={700}
-            lineHeight="47.5px"
-          >
-            Express yourself with <br /> #TheDrops255 on instagram
-          </Typography>
-          <Grid container spacing={2}>
-            {Array.from({ length: 8 }).map((menu, index) => {
-              return (
-                <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                  <Box mx={"auto"} maxWidth="287px">
-                    <img src={defaultImg} alt="default-img" />
-                  </Box>
-                </Grid>
-              );
-            })}
-          </Grid>
-        </Container>
-      </Box>
+      <CustomCategories border={true} />
+      <CustomDrops />
     </>
   );
 };

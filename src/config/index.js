@@ -481,16 +481,16 @@ export const theme = createTheme({
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
-          width: '175px',
-          height: '35px',
-          backgroundColor: 'white',
-          color: 'black',
-          padding: '25px 25px',
-          fontSize: '18px',
-          fontWeight: '400',
-          textTransform: 'capitalize'
-        }
+        // root: {
+        //   width: '175px',
+        //   height: '35px',
+        //   backgroundColor: 'white',
+        //   color: 'black',
+        //   padding: '25px 25px',
+        //   fontSize: '18px',
+        //   fontWeight: '400',
+        //   textTransform: 'capitalize'
+        // }
       }
     }
   }

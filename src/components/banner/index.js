@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, Grid, Typography, Stack, Button } from '@mui/material';
 import bannerImage from "../../assets/images/banner-section-img.png"
 import useMui from '../../hooks/useMui';
+import CustomButton from '../shared/CustomButton';
 
 const BannerSection = () => {
   const { SM } = useMui()
@@ -23,7 +24,8 @@ const BannerSection = () => {
             <Typography variant="h5" textTransform={'capitalize'} fontStyle={'normal'} fontWeight={400} >
               You just want something new to spice up <br /> your door
             </Typography>
-            <Button>shop now</Button>
+            {/* <Button>shop now</Button> */}
+            <CustomButton text="shop now" height='53px' width='175px' borderRadius={false} bgColor='white' textColor='black' />
           </Stack>
         </Box>
       </Grid>

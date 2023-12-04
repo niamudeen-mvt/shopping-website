@@ -36,8 +36,8 @@ const CustomDropDown = ({ selectedValue, SELECTED_VALUE_COLOR, MENU_ITEMS_COLOR 
   return (
     <Stack direction='row'>
       {
-        selectedValue === "English" ? null :
-          <img src={americaFlagIcon} alt="america-flag-icon" style={imgStyles} />
+        selectedValue === "English" || selectedValue === "Featured" ? null :
+          < img src={americaFlagIcon} alt="america-flag-icon" style={imgStyles} />
       }
       <FormControl sx={{ m: 1, minWidth: 120 }} >
         <Select

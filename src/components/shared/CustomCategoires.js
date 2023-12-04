@@ -40,9 +40,9 @@ const CustomCategories = ({ border = false }) => {
       <Container>
         <Grid container direction="row" spacing={1}>
           {
-            categoryData?.map((category, index) => {
+            categoryData?.map((category) => {
               return (
-                <Grid item xs={12} sm={6} md={6} lg={3} className='' mb={SM ? 0 : 4}>
+                <Grid item xs={12} sm={6} md={6} lg={3} mb={SM ? 0 : 4}>
                   <Stack direction={'row'} spacing={2} sx={{
                     display: 'flex',
                     justifyContent: "center",

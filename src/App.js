@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PublicRoutes from './routes/PublicRoutes';
 import { menuItems } from './utils/menu-items';
+import ProductPage from './view/pages/product';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
                 )
               }) : null
           }
+          <Route path={"/product-page"} element={<ProductPage />} />
         </Route>
       </Routes>
     </BrowserRouter >
