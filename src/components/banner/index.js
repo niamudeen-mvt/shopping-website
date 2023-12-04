@@ -1,8 +1,6 @@
 import React from 'react'
-import { Box, Grid, Typography, Stack } from '@mui/material';
-
+import { Box, Grid, Typography, Stack, Button } from '@mui/material';
 import bannerImage from "../../assets/images/banner-section-img.png"
-import CustomButton from '../buttons';
 import useMui from '../../hooks/useMui';
 
 const BannerSection = () => {
@@ -20,12 +18,12 @@ const BannerSection = () => {
               New Arrivals
             </Typography>
             <Typography variant="h3" fontWeight={700}>
-              Shockwave Protection <br /> Case
+              Shockwave <br />Protection  Case
             </Typography>
             <Typography variant="h5" textTransform={'capitalize'} fontStyle={'normal'} fontWeight={400} >
               You just want something new to spice up <br /> your door
             </Typography>
-            <CustomButton text="shop now" />
+            <Button>shop now</Button>
           </Stack>
         </Box>
       </Grid>

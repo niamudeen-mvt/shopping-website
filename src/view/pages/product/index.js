@@ -1,7 +1,7 @@
 import React from 'react'
 import CustomCommonBanner from '../../../components/shared/CustomCommonBanner'
 
-const ContactPage = () => {
+const ProductPage = () => {
   return (
     <>
       <CustomCommonBanner />
@@ -9,4 +9,4 @@ const ContactPage = () => {
   )
 }
 
-export default ContactPage
+export default ProductPage

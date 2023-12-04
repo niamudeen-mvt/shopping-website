@@ -10,45 +10,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CommonContainer from '../container'
 import CustomDrawer from '../shared/CustomDrawer'
 import useMui from '../../hooks/useMui'
+import { menuItems } from '../../utils/menu-items'
 
-const navLinkList = [
-  {
-    id: "home",
-    title: 'Home',
-    url: "/"
-  },
-  {
-    id: "about",
-    title: 'About',
-    url: "/about"
-  },
-  {
-    id: "shop",
-    title: 'Shop',
-    url: "/shop"
-  }, {
-    id: "new-arrivals",
-    title: 'New Arrivals',
-    url: "/new-arrivals"
-  }, {
-    id: "best-seller",
-    title: 'Best Seller',
-    url: "/best-seller"
-  }, {
-    id: "faq's",
-    title: 'Faq',
-    url: "/faq"
-  }, {
-    id: "review",
-    title: 'Review',
-    url: "/review"
-  },
-  {
-    id: "contact",
-    title: 'Contact',
-    url: "/contact"
-  },
-]
 
 
 const PrimaryNavbar = (props) => {
@@ -68,7 +31,7 @@ const PrimaryNavbar = (props) => {
       sx={{ textAlign: "center", padding: "100px 0" }}
     >
       <List>
-        {navLinkList.map(({ id, title }) => (
+        {menuItems.map(({ id, title }) => (
           <ListItem key={id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={title} />
@@ -91,7 +54,7 @@ const PrimaryNavbar = (props) => {
               <>
                 <Stack direction={'row'} spacing={4} >
                   {
-                    navLinkList?.map(({ id, title, url }) => {
+                    menuItems?.map(({ id, title, url }) => {
                       return (
                         <Link to={url}>
                           <Typography variant="body1" key={id} >

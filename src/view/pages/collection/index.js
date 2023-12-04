@@ -6,12 +6,11 @@ import {
   Pagination,
   Stack,
   useTheme,
-  Button,
 } from "@mui/material";
 import React from "react";
-import CommonBanner from "../../../components/banner/CommonBanner";
-
 import defaultImg from "../../../assets/images/Accessories-img.png";
+import CustomCommonBanner from "../../../components/shared/CustomCommonBanner";
+import CustomCategories from "../../../components/shared/CustomCategoires";
 
 const collections = [
   {
@@ -56,36 +55,13 @@ const collections = [
   },
 ];
 
-const services = [
-  {
-    id: 1,
-    title: "Free Delievery",
-    icon: defaultImg,
-  },
-  {
-    id: 2,
-    title: "Non-contact shipping",
-    icon: defaultImg,
-  },
-  {
-    id: 3,
-    title: "Money Back garauntee",
-    icon: defaultImg,
-  },
-  {
-    id: 4,
-    title: "Secure Payments",
-    icon: defaultImg,
-  },
-];
 
 const CollectionPage = () => {
   const theme = useTheme();
   console.log(theme);
   return (
     <>
-      <CommonBanner />
-
+      <CustomCommonBanner />
       <Box mb={10}>
         <Container maxWidth="lg">
           <Grid container rowGap={3} columnSpacing={3}>
@@ -93,7 +69,7 @@ const CollectionPage = () => {
               return (
                 <Grid key={menu.id} item xs={12} sm={12} md={6} lg={4}>
                   <Box maxWidth="386px" mx={"auto"}>
-                    <img src={defaultImg} />
+                    <img src={defaultImg} alt="defautl-img" />
                     <Typography
                       textAlign="center"
                       variant="h5"
@@ -113,7 +89,7 @@ const CollectionPage = () => {
           </Stack>
         </Container>
       </Box>
-
+      <CustomCategories border />
       <Box mb={10}>
         <Container maxWidth="lg">
           <Typography
@@ -130,7 +106,7 @@ const CollectionPage = () => {
               return (
                 <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
                   <Box mx={"auto"} maxWidth="287px">
-                    <img src={defaultImg} />
+                    <img src={defaultImg} alt="default-img" />
                   </Box>
                 </Grid>
               );

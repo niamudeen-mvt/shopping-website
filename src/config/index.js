@@ -454,6 +454,9 @@
 import { createTheme } from '@mui/material';
 
 export const theme = createTheme({
+  typography: {
+    fontFamily: ['Jost', 'sans-serif'].join(',')
+  },
   palette: {
     primary: {
       // dark blue
@@ -475,4 +478,20 @@ export const theme = createTheme({
 
     }
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width: '175px',
+          height: '35px',
+          backgroundColor: 'white',
+          color: 'black',
+          padding: '25px 25px',
+          fontSize: '18px',
+          fontWeight: '400',
+          textTransform: 'capitalize'
+        }
+      }
+    }
+  }
 });

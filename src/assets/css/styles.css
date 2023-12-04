@@ -247,6 +247,7 @@ img {
   padding: 74px 0;
   min-height: 747px;
   background-color: #f8f1ed;
+  margin-bottom: 50px;
 }
 
 .testimonial_section .testmonial_card {
@@ -277,6 +278,12 @@ img {
   color: var(--white-clr);
 }
 
+/* 4 decemeber */
+
+.css-16wj2gp-MuiSvgIcon-root-MuiSelect-icon {
+  color: var(--white-clr) !important ;
+}
+
 .common_banner_section {
   min-height: 284px;
   background-image: url("../images/common-banner-section.png");
@@ -285,8 +292,10 @@ img {
   background-attachment: fixed;
 }
 
-/* 4 decemeber */
+.common_margin {
+  margin-bottom: 86px;
+}
 
-.css-16wj2gp-MuiSvgIcon-root-MuiSelect-icon {
-  color: var(--white-clr) !important ;
+.b1 {
+  border: 1px solid black;
 }

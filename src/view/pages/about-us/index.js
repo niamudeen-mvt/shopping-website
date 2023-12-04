@@ -1,9 +1,8 @@
-import CommonBanner from "../../../components/banner/CommonBanner"
-
+import CustomCommonBanner from "../../../components/shared/CustomCommonBanner"
 
 const AboutUsPage = () => {
   return (
-    <CommonBanner />
+    <CustomCommonBanner />
   )
 }
 
