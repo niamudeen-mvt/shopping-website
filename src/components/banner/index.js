@@ -3,12 +3,13 @@ import { Box, Grid, Typography, Stack } from '@mui/material';
 
 import bannerImage from "../../assets/images/banner-section-img.png"
 import CustomButton from '../buttons';
+import useMui from '../../hooks/useMui';
 
 const BannerSection = () => {
-
+  const { SM } = useMui()
   return (
     <Grid container sx={{ minHeight: "500px", bgcolor: "#E7E5E1" }} >
-      <Grid item xs={12} md={6} >
+      <Grid item xs={12} md={6} sx={{ padding: SM ? "100px 0" : "0" }}>
         <Box height="100%" width="100%" display="flex" justifyContent="center" alignItems="center">
           <Stack
             direction="column"

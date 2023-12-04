@@ -42,6 +42,10 @@ const TopNavbar = (props) => {
         <Typography color="error">SHOP15</Typography>
         <Typography >For 15 Percent Off Your order!</Typography>
       </Stack>
+      <Box direction="column" spacing={1} display='flex' justifyContent='center'>
+        <CustomDropDown selectedValue={"English"} SELECTED_VALUE_COLOR={BLACK} MENU_ITEMS_COLOR={BLACK} />
+        <CustomDropDown selectedValue={"USD"} SELECTED_VALUE_COLOR={BLACK} MENU_ITEMS_COLOR={BLACK} />
+      </Box>
     </Box>
   );
 
@@ -64,10 +68,8 @@ const TopNavbar = (props) => {
                 <Typography color={WHITE}>For 15 Percent Off Your order!</Typography>
               </Stack>
               <Stack direction="row" spacing={1}>
-                <CustomDropDown selectedValue={"English"} />
-                <CustomDropDown selectedValue={"USD"} />
-                {/* <CustomDropdownMenu  />
-                <CustomDropdownMenu  /> */}
+                <CustomDropDown selectedValue={"English"} SELECTED_VALUE_COLOR={WHITE} MENU_ITEMS_COLOR={BLACK} />
+                <CustomDropDown selectedValue={"USD"} SELECTED_VALUE_COLOR={WHITE} MENU_ITEMS_COLOR={BLACK} />
               </Stack>
             </>
           ) : (

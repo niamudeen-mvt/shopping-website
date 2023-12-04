@@ -1,8 +1,6 @@
 
-
 import { useTheme } from "@emotion/react"
 import { useMediaQuery } from "@mui/material";
-
 
 // xs, : 0px
 // sm, : 600px

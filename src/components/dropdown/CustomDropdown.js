@@ -1,10 +1,9 @@
-import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import useMui from '../../hooks/useMui';
 import { Stack } from '@mui/material';
 import americaFlagIcon from "../../assets/icons/america-flag-icon.svg"
+import { useState } from 'react';
 
 const menuItems = [
   "option1",
@@ -12,20 +11,12 @@ const menuItems = [
   "option3"
 ]
 
-
-
-const CustomDropDown = ({ selectedValue }) => {
-  const [age, setAge] = React.useState('');
+const CustomDropDown = ({ selectedValue, SELECTED_VALUE_COLOR, MENU_ITEMS_COLOR }) => {
+  const [currentValue, setCurrentValue] = useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setCurrentValue(event.target.value);
   };
-
-
-  const { WHITE, BLACK } = useMui()
-
-  const SELECTED_VALUE_COLOR = WHITE
-  const MENU_ITEMS_COLOR = BLACK
 
 
   const colorStyles = {
@@ -50,7 +41,7 @@ const CustomDropDown = ({ selectedValue }) => {
       }
       <FormControl sx={{ m: 1, minWidth: 120 }} >
         <Select
-          value={age}
+          value={currentValue}
           onChange={handleChange}
           displayEmpty
           sx={colorStyles}
