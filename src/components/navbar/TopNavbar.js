@@ -1,11 +1,6 @@
 import { useState } from "react";
-import CommonContainer from "../container"
-import {
-  Stack,
-  Box,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import CommonContainer from "../container";
+import { Stack, Box, IconButton, Typography } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -20,41 +15,52 @@ import useMui from "../../hooks/useMui";
 const TopNavbar = (props) => {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { MD, BLACK, WHITE } = useMui()
-  const isMatches = MD
-
+  const { MD, BLACK, WHITE } = useMui();
+  const isMatches = MD;
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   const iconStyles = {
-    color: WHITE
-  }
-
+    color: WHITE,
+  };
 
   const drawer = (
-    <Box
-      onClick={handleDrawerToggle}
-      sx={{ padding: "100px 0" }}
-    >
-      <Stack direction='row' spacing={1} textAlign='center' justifyContent='center'>
+    <Box onClick={handleDrawerToggle} sx={{ padding: "100px 0" }}>
+      <Stack
+        direction="row"
+        spacing={1}
+        textAlign="center"
+        justifyContent="center"
+      >
         <Typography color="error">SHOP15</Typography>
-        <Typography >For 15 Percent Off Your order!</Typography>
+        <Typography>For 15 Percent Off Your order!</Typography>
       </Stack>
-      <Box direction="column" spacing={1} display='flex' justifyContent='center'>
-        <CustomDropDown selectedValue={"English"} SELECTED_VALUE_COLOR={BLACK} MENU_ITEMS_COLOR={BLACK} />
-        <CustomDropDown selectedValue={"USD"} SELECTED_VALUE_COLOR={BLACK} MENU_ITEMS_COLOR={BLACK} />
+      <Box
+        direction="column"
+        spacing={1}
+        display="flex"
+        justifyContent="center"
+      >
+        <CustomDropDown
+          selectedValue={"English"}
+          SELECTED_VALUE_COLOR={BLACK}
+          MENU_ITEMS_COLOR={BLACK}
+        />
+        <CustomDropDown
+          selectedValue={"USD"}
+          SELECTED_VALUE_COLOR={BLACK}
+          MENU_ITEMS_COLOR={BLACK}
+        />
       </Box>
     </Box>
   );
 
   return (
-    <Box
-      sx={{ bgcolor: BLACK }}
-    >
+    <Box sx={{ bgcolor: BLACK }}>
       <CommonContainer>
-        <Box sx={flexSBStyles} minHeight={'44px'}>
+        <Box sx={flexSBStyles} minHeight={"44px"}>
           <Stack direction="row" spacing={3} sx={{ flexGrow: 1 }}>
             <FacebookIcon sx={iconStyles} />
             <TwitterIcon sx={iconStyles} />
@@ -65,11 +71,21 @@ const TopNavbar = (props) => {
             <>
               <Stack direction={"row"} spacing={1} sx={{ flexGrow: 1 }}>
                 <Typography color="error">SHOP15</Typography>
-                <Typography color={WHITE}>For 15 Percent Off Your order!</Typography>
+                <Typography color={WHITE}>
+                  For 15 Percent Off Your order!
+                </Typography>
               </Stack>
               <Stack direction="row" spacing={1}>
-                <CustomDropDown selectedValue={"English"} SELECTED_VALUE_COLOR={WHITE} MENU_ITEMS_COLOR={BLACK} />
-                <CustomDropDown selectedValue={"USD"} SELECTED_VALUE_COLOR={WHITE} MENU_ITEMS_COLOR={BLACK} />
+                <CustomDropDown
+                  selectedValue={"English"}
+                  SELECTED_VALUE_COLOR={WHITE}
+                  MENU_ITEMS_COLOR={BLACK}
+                />
+                <CustomDropDown
+                  selectedValue={"USD"}
+                  SELECTED_VALUE_COLOR={WHITE}
+                  MENU_ITEMS_COLOR={BLACK}
+                />
               </Stack>
             </>
           ) : (
@@ -83,15 +99,15 @@ const TopNavbar = (props) => {
             </IconButton>
           )}
         </Box>
-      </CommonContainer >
+      </CommonContainer>
       <CustomDrawer
         mobileOpen={mobileOpen}
         handleDrawerToggle={handleDrawerToggle}
         window={window}
         drawer={drawer}
       />
-    </Box >
+    </Box>
   );
-}
+};
 
 export default TopNavbar;
