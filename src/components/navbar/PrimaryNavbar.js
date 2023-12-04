@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Container, Stack, Typography, IconButton, Badge, Drawer, Button, ListItem, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery } from '@mui/material'
+import { Box, Stack, Typography, IconButton, Badge, ListItem, List, ListItemButton, ListItemText } from '@mui/material'
 import brandImage from "../../assets/icons/brand-logo.svg"
 import { Link } from 'react-router-dom'
 import searchIcon from "../../assets/icons/search-icon.svg"
@@ -7,11 +7,9 @@ import userIcon from "../../assets/icons/user-icon.svg"
 import likeIcon from "../../assets/icons/like-icon.svg"
 import shoppingBag from "../../assets/icons/shopping-bag-icon.svg"
 import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
 import CommonContainer from '../container'
-import { useTheme } from '@emotion/react'
 import CustomDrawer from '../shared/CustomDrawer'
-import useBreakpoints from '../../hooks/useBreakpoints'
+import useMui from '../../hooks/useMui'
 
 const navLinkList = [
   {
@@ -56,10 +54,9 @@ const navLinkList = [
 const PrimaryNavbar = (props) => {
 
 
-  const theme = useTheme();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { LG } = useBreakpoints()
+  const { LG, BLACK } = useMui()
   const isMatches = LG
 
   const handleDrawerToggle = () => {
@@ -135,10 +132,9 @@ const PrimaryNavbar = (props) => {
                 edge="start"
                 onClick={handleDrawerToggle}
               >
-                <MenuIcon sx={{ color: theme.palette.common.black }} />
+                <MenuIcon sx={{ color: BLACK }} />
               </IconButton>
           }
-
         </Box>
       </CommonContainer>
       <CustomDrawer
