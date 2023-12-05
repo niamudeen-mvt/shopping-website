@@ -35,17 +35,16 @@ const CustomFeaturedProducts = ({
 }) => {
   const [productList, setProductList] = useState([]);
   const { SM } = useMui()
-  console.log(SM);
 
   const routeName = useLocation()?.pathname;
 
   useEffect(() => {
     (async () => {
       const data = await newArrivalProductsList(searchResultCount);
+      console.log(productList)
       setProductList(data);
     })();
   }, []);
-
 
 
   const reviewHeadingStyles = {

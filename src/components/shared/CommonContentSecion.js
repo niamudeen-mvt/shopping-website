@@ -4,9 +4,10 @@ import CustomButton from './CustomButton';
 import { flexCenterStyles } from '../styling';
 
 const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
+
   return (
     <Box textTransform={'capitalize'} fontStyle={'normal'} sx={{ ...flexCenterStyles, flexDirection: 'column' }}>
-      <Typography variant="h5" fontSize={26} fontWeight={500} marginBottom={'14px'} >
+      <Typography variant="h5" fontWeight={500} marginBottom={'14px'} >
         {heading}
       </Typography>
       <Typography variant="body2" lineHeight={'24px'} marginBottom={'30px'} color="#000000" >

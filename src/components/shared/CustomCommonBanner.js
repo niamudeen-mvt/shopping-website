@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { menuItems } from '../../utils/menu-items'
-import { bannerHeading, bannerSubHeading, flexCenterStyles } from '../styling'
+import { flexCenterStyles } from '../styling'
 
 
 const CustomCommonBanner = () => {
@@ -13,10 +13,10 @@ const CustomCommonBanner = () => {
   return (
     <Box className="common_banner_section common_margin" sx={flexCenterStyles}>
       <Stack spacing={3}>
-        <Typography variant='h3' textTransform='uppercase' sx={bannerHeading}>
+        <Typography variant='h3' lineHeight={'normal'} textTransform='uppercase' >
           {pageTitle}
         </Typography>
-        <Typography variant='body2' sx={bannerSubHeading} textAlign='center'>
+        <Typography variant='body2' fontWeight={500} textAlign='center'>
           Home / {pageTitle}
         </Typography>
       </Stack>

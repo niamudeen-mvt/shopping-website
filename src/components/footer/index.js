@@ -9,10 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import {
-  bannerSubHeading,
   flexCenterStyles,
-  footerCopyRight,
-  footerheading,
 } from "../styling";
 import americaFlagIcon from "../../assets/icons/america-flag-icon.svg";
 import CommonContainer from "../container";

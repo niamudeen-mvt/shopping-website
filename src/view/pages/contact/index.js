@@ -7,17 +7,15 @@ import CommonContainer from '../../../components/container'
 import CustomButton from '../../../components/shared/CustomButton'
 
 import phoneSvg from "../../../assets/icons/icon _phone call_.svg"
-import { defaultBorder } from '../../../components/styling'
-
 
 
 const CommonHeading = ({ text, mb }) => {
-  return <Typography variant='h5' fontSize={26} fontWeight={500} marginBottom={'16px'}>
+  return <Typography variant='h5' marginBottom={'16px'} fontWeight={500}>
     {text}
   </Typography>
 }
 const CommonDescription = ({ text, mb }) => {
-  return <Typography variant='subtitle1' marginBottom={mb ? '32px' : '0'} fontSize={18} fontWeight={400} lineHeight={'24px'} color={'#000000'}>
+  return <Typography variant='body2' marginBottom={mb ? '32px' : '0'} lineHeight={'24px'} >
     {text}
   </Typography>
 }

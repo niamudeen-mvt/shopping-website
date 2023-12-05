@@ -12,10 +12,9 @@ const CustomSocial = ({ heading, socialIconList }) => {
     <Box mb={10}>
       <CommonContainer maxWidth="lg">
         <Typography
-          variant="h4"
+          variant="h2"
           mb={6}
           textAlign="center"
-          fontWeight={700}
           lineHeight="47.5px"
         >
           {heading}
@@ -27,7 +26,7 @@ const CustomSocial = ({ heading, socialIconList }) => {
                 <Box height={'176px'} width={'176px'} sx={flexCenterStyles} marginBottom={'16px'} border="1px solid #D9D9D9">
                   <img src={social.img} alt="social" style={{ height: '48px', width: '48px' }} />
                 </Box>
-                <Typography variant='body1' fontSize={18} fontWeight={400} lineHeight={'24px'} textAlign={'center'}>{social?.title}</Typography>
+                <Typography variant='body2' lineHeight={'24px'} textAlign={'center'}>{social?.title}</Typography>
               </Box>
             );
           })}
@@ -42,7 +41,7 @@ const CustomSocial = ({ heading, socialIconList }) => {
               </Box>
               : null
           }
-          <Typography component={'p'} fontSize={18} fontWeight={200} textAlign={'center'} color={'#000000'}>
+          <Typography variant='body2' lineHeight={'24px'} textAlign={'center'} color={'#000000'}>
             For any information regarding your order please send an email<br /> to <span style={{ fontWeight: 'bold' }}>TheDrops255@gmail.com</span> we will respond to your email<br /> within one business day
           </Typography>
           {

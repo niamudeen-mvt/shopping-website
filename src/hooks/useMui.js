@@ -9,7 +9,6 @@ import { useMediaQuery } from "@mui/material";
 
 const useMui = () => {
   const theme = useTheme();
-  console.log(theme);
 
   const LG = useMediaQuery(theme.breakpoints.up("lg"));
   const MD = useMediaQuery(theme.breakpoints.up("md"));

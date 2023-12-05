@@ -70,9 +70,8 @@ const CollectionPage = () => {
                     <Typography
                       textAlign="center"
                       variant="h5"
-                      fontStyle="normal"
-                      fontWeight={500}
                       lineHeight="59px"
+                      fontWeight={500}
                     >
                       {menu.title}
                     </Typography>

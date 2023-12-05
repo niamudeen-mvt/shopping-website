@@ -97,22 +97,6 @@ export const theme = createTheme({
       white: "#FFFFFF"
     }
   },
-  // palette: {
-  //   primary: {
-  //     main: "#4175BD",
-  //     light: "#4B9AD5",
-  //     dark: "#3A5CAC",
-  //   },
-  //   secondary: {
-  //     main: "#000000",
-  //   },
-  //   default: {
-  //     main: "white",
-  //   },
-  //   inherit: {
-  //     main: "white",
-  //   },
-  // },
   components: {
     MuiButton: {
       styleOverrides: {

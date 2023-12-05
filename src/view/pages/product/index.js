@@ -1,12 +1,8 @@
-import { Box, Card, CardMedia, Divider, Grid, Rating, Stack, Typography } from "@mui/material";
+import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
 import CommonContainer from "../../../components/container";
 import defaultImg from "../../../assets/images/product.png";
-import dummyProductImg from "../../../assets/images/Accessories-img.png";
 import {
-  bannerHeading,
-  bannerSubHeading,
   defaultBorder,
-  footerheading,
 } from "../../../components/styling";
 import useMui from "../../../hooks/useMui";
 import SelectDropDown from "../../../components/dropdown";
@@ -57,7 +53,7 @@ const ProductPage = () => {
       <Box paddingTop="62px" className="common_margin">
         <CommonContainer maxWidth="lg">
           <Box className="common_margin">
-            <Typography component="p" sx={{ marginBottom: "71px" }}>
+            <Typography variant="body2" fontWeight={500} sx={{ marginBottom: "71px" }} color={'#8D8D8D'}>
               Home / New Arrivals /
             </Typography>
             <Stack direction={MD ? "row" : "column"} spacing={5}>
@@ -104,7 +100,7 @@ const ProductPage = () => {
               </Box>
               <Box sx={{ flex: 1 }}>
                 <Typography
-                  sx={bannerHeading}
+                  variant="h3"
                   gutterBottom
                   textTransform={"uppercase"}
                 >
@@ -116,14 +112,14 @@ const ProductPage = () => {
                 </Stack>
                 <CommonDivider />
                 <Box sx={commonMarginStyles}>
-                  <Typography component={"p"} sx={bannerSubHeading}>
+                  <Typography variant="body2" fontWeight={500} lineHeight={'26.5px'}>
                     Color
                   </Typography>
                   <SelectDropDown width={"367px"} border={true} />
                 </Box>
                 <CommonDivider />
                 <Box sx={commonMarginStyles}>
-                  <Typography component={"p"} sx={bannerSubHeading} marginBottom={'16px'}>
+                  <Typography variant="body2" fontWeight={500} marginBottom={'16px'}>
                     Quantity
                   </Typography>
                   <QuantityIncrementer />

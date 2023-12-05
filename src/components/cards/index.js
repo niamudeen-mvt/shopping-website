@@ -6,7 +6,7 @@ import {
   Stack,
   CardMedia,
 } from "@mui/material";
-import { bannerSubHeading, defaultBorder } from "../styling";
+import { defaultBorder } from "../styling";
 import CustomRating from "../shared/CustomRating";
 import CustomLabel from "../shared/CustomLabel";
 import ProductPrice from "../shared/Product/ProductPrice";

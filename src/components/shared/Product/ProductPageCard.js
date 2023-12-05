@@ -32,17 +32,17 @@ const ProductPageCard = ({ product }) => {
       </Box>
       <CardContent>
         <Stack direction={'column'} spacing={2}>
-          <Typography variant="body1" fontSize={'16px'} fontWeight={'500'}>
+          <Typography variant="body1" fontWeight={'500'}>
             {product.customer}
           </Typography>
-          <Typography variant="body1" fontSize={'16px'} fontWeight={'500'} color="#8D8D8D">
+          <Typography variant="body1" fontWeight={'500'} color="#8D8D8D">
             {product.date}
           </Typography>
           <CustomRating
             count={product?.rating}
             color={"#FF9000"}
           />
-          <Typography variant="body1" fontSize={'14px'} fontWeight={'500'} color={'#1A1C20'}>
+          <Typography variant="caption" fontWeight={'500'} color={'#1A1C20'}>
             {product?.description}
           </Typography>
         </Stack>
