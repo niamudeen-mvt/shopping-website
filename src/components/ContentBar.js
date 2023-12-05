@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import mainImage from "../assets/images/content-bar-section-main-img.png";
 import CustomButton from "./shared/CustomButton";

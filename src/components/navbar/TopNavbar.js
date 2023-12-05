@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CommonContainer from "../container";
 import { Stack, Box, IconButton, Typography } from "@mui/material";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
