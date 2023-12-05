@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import { NewArrivalCard } from "../../components/cards/index";
 import { newArrivalProductsList } from "../../services/api/product-api";
-import { flexCenterStyles, flexSBStyles } from "../styling";
+import { flexSBStyles } from "../styling";
 import SelectDropDown from "../dropdown";
 import CustomPagination from "./CustomPagination";
 import { Link, useLocation } from "react-router-dom";

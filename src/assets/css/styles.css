@@ -273,3 +273,9 @@ img {
   width: 100%;
   object-fit: contain;
 }
+
+.custom_categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 50px;
+}

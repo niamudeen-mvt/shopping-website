@@ -1,64 +1,59 @@
-import { Box, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Stack, Typography } from '@mui/material'
 import React from 'react'
-import useMui from '../../hooks/useMui';
 import { flexCenterStyles } from '../styling';
-import LocalMallIcon from '@mui/icons-material/LocalMall';
-import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
-import ShieldOutlinedIcon from '@mui/icons-material/ShieldOutlined';
-import WalletOutlinedIcon from '@mui/icons-material/WalletOutlined';
-
+import deliverySvg from "../../assets/icons/delivery.svg"
+import shippingSvg from "../../assets/icons/shipping.svg"
+import moneySvg from "../../assets/icons/money.svg"
+import securitySvg from "../../assets/icons/security.svg"
+import CommonContainer from '../container';
 
 
 const categoryData = [
   {
     id: 1,
-    icon: LocalShippingOutlinedIcon,
+    img: deliverySvg,
     title: 'Free Delivery'
   },
   {
     id: 2,
-    icon: LocalMallIcon,
+    img: shippingSvg,
     title: 'Non-contact shipping'
   },
   {
     id: 3,
-    icon: WalletOutlinedIcon,
+    img: moneySvg,
     title: 'Money back guarntee'
   },
   {
     id: 4,
-    icon: ShieldOutlinedIcon,
+    img: securitySvg,
     title: 'Secure payments'
   },
 ]
+
+
+
+
 const CustomCategories = ({ border = false }) => {
-  const { BLACK, SM } = useMui()
   const GREY_COLOR = 'rgba(0, 0, 0, 0.08)'
 
   return (
-    <Box className="common_margin" minHeight={115} sx={flexCenterStyles} border={border ? `1px solid ${GREY_COLOR}` : ''}>
-      <Container>
-        <Grid container direction="row" spacing={1}>
+    <Box className="common_margin" minHeight={115} sx={flexCenterStyles} border={border ? `1px solid ${GREY_COLOR}` : ''} padding={'25px 0'}>
+      <CommonContainer maxWidth='lg'>
+        <div className="custom_categories">
           {
-            categoryData?.map((category) => {
+            categoryData?.map((category, index) => {
               return (
-                <Grid item xs={12} sm={6} md={6} lg={3} mb={SM ? 0 : 4}>
-                  <Stack direction={'row'} spacing={2} sx={{
-                    display: 'flex',
-                    justifyContent: "center",
-                    alignItems: 'center'
-                  }} >
-                    <category.icon sx={{ color: BLACK }} />
-                    <Typography variant="caption" display="block" gutterBottom >
-                      {category.title}
-                    </Typography>
-                  </Stack>
-                </Grid>
+                <Stack direction={'row'} spacing={2} >
+                  <img src={category.img} alt={category.title} style={{ height: '20px', width: '20px' }} />
+                  <Typography variant="caption" display="block" gutterBottom >
+                    {category.title}
+                  </Typography>
+                </Stack>
               )
             })
           }
-        </Grid>
-      </Container>
+        </div></CommonContainer>
     </Box >
   )
 }
