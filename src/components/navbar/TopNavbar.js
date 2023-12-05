@@ -8,8 +8,8 @@ import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { flexSBStyles } from "../styling";
 import CustomDrawer from "../shared/CustomDrawer";
-import CustomDropDown from "../dropdown/CustomDropdown";
 import useMui from "../../hooks/useMui";
+import CustomSelect from "../shared/CustomSelect";
 
 const TopNavbar = (props) => {
   const { window } = props;
@@ -27,31 +27,34 @@ const TopNavbar = (props) => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ padding: "100px 0" }}>
-      <Stack
-        direction="row"
-        spacing={1}
-        textAlign="center"
-        justifyContent="center"
-      >
-        <Typography color="error">SHOP15</Typography>
-        <Typography>For 15 Percent Off Your order!</Typography>
-      </Stack>
-      <Box
-        direction="column"
-        spacing={1}
-        display="flex"
-        justifyContent="center"
-      >
-        <CustomDropDown
-          selectedValue={"English"}
-          SELECTED_VALUE_COLOR={BLACK}
-          MENU_ITEMS_COLOR={BLACK}
-        />
-        <CustomDropDown
-          selectedValue={"USD"}
-          SELECTED_VALUE_COLOR={BLACK}
-          MENU_ITEMS_COLOR={BLACK}
-        />
+      <Box>
+        <Stack
+          direction="row"
+          spacing={1}
+          textAlign="center"
+          justifyContent="center"
+          mb={4}
+        >
+          <Typography color="error">SHOP15</Typography>
+          <Typography>For 15 Percent Off Your order!</Typography>
+        </Stack>
+        <Stack
+          direction="row"
+          spacing={1}
+          textAlign="center"
+          justifyContent="center"
+        >
+          <CustomSelect
+            defaultValue={1}
+            type="dark"
+            options={[{ value: 1, label: "English" }]}
+          />
+          <CustomSelect
+            defaultValue={2}
+            type="dark"
+            options={[{ value: 1, label: "USD" }]}
+          />
+        </Stack>
       </Box>
     </Box>
   );
@@ -69,21 +72,21 @@ const TopNavbar = (props) => {
           {isMatches ? (
             <>
               <Stack direction={"row"} spacing={1} sx={{ flexGrow: 1 }}>
-                <Typography variant="caption" fontWeight={700} color="error">SHOP15</Typography>
+                <Typography variant="caption" fontWeight={700} color="error">
+                  SHOP15
+                </Typography>
                 <Typography variant="caption" color={WHITE}>
                   For 15 Percent Off Your order!
                 </Typography>
               </Stack>
               <Stack direction="row" spacing={1}>
-                <CustomDropDown
-                  selectedValue={"English"}
-                  SELECTED_VALUE_COLOR={WHITE}
-                  MENU_ITEMS_COLOR={BLACK}
+                <CustomSelect
+                  defaultValue={1}
+                  options={[{ value: 1, label: "English" }]}
                 />
-                <CustomDropDown
-                  selectedValue={"USD"}
-                  SELECTED_VALUE_COLOR={WHITE}
-                  MENU_ITEMS_COLOR={BLACK}
+                <CustomSelect
+                  defaultValue={2}
+                  options={[{ value: 1, label: "USD" }]}
                 />
               </Stack>
             </>

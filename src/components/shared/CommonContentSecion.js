@@ -1,20 +1,28 @@
-import { Box, Typography } from '@mui/material';
-import React from 'react'
-import CustomButton from './CustomButton';
-import { flexCenterStyles } from '../styling';
+import { Box, Typography } from "@mui/material";
+import React from "react";
+import CustomButton from "./CustomButton";
+import { flexCenterStyles } from "../styling";
 
 const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
-
   return (
-    <Box textTransform={'capitalize'} fontStyle={'normal'} sx={{ ...flexCenterStyles, flexDirection: 'column' }}>
-      <Typography variant="h5" fontWeight={500} marginBottom={'14px'} >
+    <Box
+      textTransform={"capitalize"}
+      fontStyle={"normal"}
+      sx={{ ...flexCenterStyles, flexDirection: "column" }}
+    >
+      <Typography variant="h5" fontWeight={500} marginBottom={"14px"}>
         {heading}
       </Typography>
-      <Typography variant="body2" lineHeight={'24px'} marginBottom={'30px'} color="#000000" >
-        {
-          subheading ? subheading : `You just want something new to spice up
-         your door`
-        }
+      <Typography
+        variant="body2"
+        lineHeight={"24px"}
+        marginBottom={"30px"}
+        color="#000000"
+      >
+        {subheading
+          ? subheading
+          : `You just want something new to spice up
+         your door`}
       </Typography>
       <CustomButton
         bgColor={btnColor}
@@ -28,6 +36,6 @@ const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
       />
     </Box>
   );
-}
+};
 
-export default CommonContentSecion
+export default CommonContentSecion;

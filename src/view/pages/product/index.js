@@ -1,11 +1,8 @@
 import { Box, Divider, Grid, Stack, Typography } from "@mui/material";
 import CommonContainer from "../../../components/container";
 import defaultImg from "../../../assets/images/product.png";
-import {
-  defaultBorder,
-} from "../../../components/styling";
+import { defaultBorder } from "../../../components/styling";
 import useMui from "../../../hooks/useMui";
-import SelectDropDown from "../../../components/dropdown";
 import CustomButton from "../../../components/shared/CustomButton";
 import QuantityIncrementer from "../../../components/shared/CommonQuantityCounter";
 import CustomFeaturedProducts from "../../../components/shared/CustomFeaturedProducts";
@@ -13,6 +10,7 @@ import CommonHeadingBox from "../../../components/shared/CommonHeadingBox";
 import CustomRating from "../../../components/shared/CustomRating";
 import CustomLabel from "../../../components/shared/CustomLabel";
 import ProductPrice from "../../../components/shared/Product/ProductPrice";
+import CustomSelect from "../../../components/shared/CustomSelect";
 
 const CommonContent = ({ heading, description }) => {
   return (
@@ -38,9 +36,8 @@ const CommonContent = ({ heading, description }) => {
 };
 
 const CommonDivider = () => {
-  return <Divider sx={{ marginBottom: '20px' }} />
-}
-
+  return <Divider sx={{ marginBottom: "20px" }} />;
+};
 
 const ProductPage = () => {
   const { MD } = useMui();
@@ -53,7 +50,12 @@ const ProductPage = () => {
       <Box paddingTop="62px" className="common_margin">
         <CommonContainer maxWidth="lg">
           <Box className="common_margin">
-            <Typography variant="body2" fontWeight={500} sx={{ marginBottom: "71px" }} color={'#8D8D8D'}>
+            <Typography
+              variant="body2"
+              fontWeight={500}
+              sx={{ marginBottom: "71px" }}
+              color={"#8D8D8D"}
+            >
               Home / New Arrivals /
             </Typography>
             <Stack direction={MD ? "row" : "column"} spacing={5}>
@@ -71,27 +73,28 @@ const ProductPage = () => {
                 <Grid container spacing={3}>
                   {[1, 2, 3, 4].map((e) => {
                     return (
-                      <Grid item xs={6} key={e} >
-
-                        <Box position='relative'>
-                          {
-                            e !== 4 ?
-                              <CustomLabel
-                                text={"tuya"}
-                                width="65px"
-                                height="25px"
-                                bgColor={"#ff5722"}
-                                fontSize={"20px"}
-                                fontWeight={"bold"}
-                                lineHeight="14px"
-                                letterSpacing="2.1px"
-                                position="top-right"
-                                textStyle="lowercase"
-                                top="0"
-                              />
-                              : null
-                          }
-                          <img src={defaultImg} alt="product-img" style={defaultBorder} />
+                      <Grid item xs={6} key={e}>
+                        <Box position="relative">
+                          {e !== 4 ? (
+                            <CustomLabel
+                              text={"tuya"}
+                              width="65px"
+                              height="25px"
+                              bgColor={"#ff5722"}
+                              fontSize={"20px"}
+                              fontWeight={"bold"}
+                              lineHeight="14px"
+                              letterSpacing="2.1px"
+                              position="top-right"
+                              textStyle="lowercase"
+                              top="0"
+                            />
+                          ) : null}
+                          <img
+                            src={defaultImg}
+                            alt="product-img"
+                            style={defaultBorder}
+                          />
                         </Box>
                       </Grid>
                     );
@@ -107,19 +110,33 @@ const ProductPage = () => {
                   Door Lock 2.0
                 </Typography>
                 <CustomRating count={5} color={"#FF9000"} size="medium" />
-                <Stack direction="row" spacing={3} marginBottom={'20px'}>
+                <Stack direction="row" spacing={3} marginBottom={"20px"}>
                   <ProductPrice />
                 </Stack>
                 <CommonDivider />
                 <Box sx={commonMarginStyles}>
-                  <Typography variant="body2" fontWeight={500} lineHeight={'26.5px'}>
+                  <Typography
+                    variant="body2"
+                    fontWeight={500}
+                    lineHeight={"26.5px"}
+                    gutterBottom
+                  >
                     Color
                   </Typography>
-                  <SelectDropDown width={"367px"} border={true} />
+                  <CustomSelect
+                    width={"367px"}
+                    type={"dark"}
+                    options={[{ value: 1, label: "Silver Type" }]}
+                    margin={false}
+                  />
                 </Box>
                 <CommonDivider />
                 <Box sx={commonMarginStyles}>
-                  <Typography variant="body2" fontWeight={500} marginBottom={'16px'}>
+                  <Typography
+                    variant="body2"
+                    fontWeight={500}
+                    marginBottom={"16px"}
+                  >
                     Quantity
                   </Typography>
                   <QuantityIncrementer />
@@ -167,7 +184,11 @@ const ProductPage = () => {
           </Box>
           <CommonHeadingBox heading="Similar Products" mb="40px" />
           <CustomFeaturedProducts searchResultCount="4" showDropDown={false} />
-          <CustomFeaturedProducts searchResultCount="8" showDropDown={true} heading={"review"} />
+          <CustomFeaturedProducts
+            searchResultCount="8"
+            showDropDown={true}
+            heading={"review"}
+          />
         </CommonContainer>
       </Box>
     </>

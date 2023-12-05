@@ -4,71 +4,71 @@ export const theme = createTheme({
   typography: {
     fontFamily: ["Jost", "sans-serif"].join(","),
     h1: {
-      fontSize: '48px',
-      fontWeight: '700',
-      lineHeight: '59px',
-      fontStyle: 'normal',
-      textTransform: 'uppercase'
+      fontSize: "48px",
+      fontWeight: "700",
+      lineHeight: "59px",
+      fontStyle: "normal",
+      textTransform: "uppercase",
     },
     h2: {
-      fontSize: '38px',
-      fontWeight: '600',
-      lineHeight: '60.5px',
-      fontStyle: 'normal',
-      textTransform: 'capitalize'
+      fontSize: "38px",
+      fontWeight: "600",
+      lineHeight: "60.5px",
+      fontStyle: "normal",
+      textTransform: "capitalize",
     },
     h3: {
-      fontSize: '36px',
-      fontWeight: '700',
-      lineHeight: '59px',
-      fontStyle: 'normal',
-      textTransform: 'capitalize'
+      fontSize: "36px",
+      fontWeight: "700",
+      lineHeight: "59px",
+      fontStyle: "normal",
+      textTransform: "capitalize",
     },
     h4: {
-      fontSize: '30px',
-      fontWeight: '700',
-      lineHeight: '59px',
-      fontStyle: 'normal',
-      textTransform: 'capitalize'
+      fontSize: "30px",
+      fontWeight: "700",
+      lineHeight: "59px",
+      fontStyle: "normal",
+      textTransform: "capitalize",
     },
     h5: {
-      fontSize: '26px',
-      fontWeight: '400',
-      lineHeight: '44px',
-      fontStyle: 'normal',
-      textTransform: 'capitalize'
+      fontSize: "26px",
+      fontWeight: "400",
+      lineHeight: "44px",
+      fontStyle: "normal",
+      textTransform: "capitalize",
     },
     h6: {
-      fontSize: '24px',
-      fontWeight: '400',
-      lineHeight: '44px',
-      fontStyle: 'normal',
-      textTransform: 'capitalize'
+      fontSize: "24px",
+      fontWeight: "400",
+      lineHeight: "44px",
+      fontStyle: "normal",
+      textTransform: "capitalize",
     },
     subtitle1: {
-      fontSize: '22px',
-      fontWeight: '400',
-      lineHeight: '34px',
-      fontStyle: 'normal',
+      fontSize: "22px",
+      fontWeight: "400",
+      lineHeight: "34px",
+      fontStyle: "normal",
     },
     body2: {
-      fontSize: '18px',
-      fontWeight: '400',
-      lineHeight: 'normal',
-      fontStyle: 'normal',
+      fontSize: "18px",
+      fontWeight: "400",
+      lineHeight: "normal",
+      fontStyle: "normal",
     },
     body1: {
-      fontSize: '16px',
-      fontWeight: '400',
-      fontStyle: 'normal',
-      lineHeight: 'normal',
+      fontSize: "16px",
+      fontWeight: "400",
+      fontStyle: "normal",
+      lineHeight: "normal",
     },
     caption: {
-      fontSize: '14px',
-      fontWeight: '400',
-      fontStyle: 'normal',
-      lineHeight: 'normal',
-    }
+      fontSize: "14px",
+      fontWeight: "400",
+      fontStyle: "normal",
+      lineHeight: "normal",
+    },
   },
   palette: {
     primary: {
@@ -81,21 +81,21 @@ export const theme = createTheme({
       light: "#D9D9D9",
     },
     warning: {
-      main: "#FF9000"
+      main: "#FF9000",
     },
     error: {
-      main: "#E31D1C"
+      main: "#E31D1C",
     },
     info: {
-      main: "#000000"
+      main: "#000000",
     },
     success: {
-      main: "#FFFFFF"
+      main: "#FFFFFF",
     },
     common: {
       black: "#000000",
-      white: "#FFFFFF"
-    }
+      white: "#FFFFFF",
+    },
   },
   components: {
     MuiButton: {
@@ -113,6 +113,11 @@ export const theme = createTheme({
       },
     },
   },
-
-
+  // custom: {
+  //   mango: "purple",
+  //   para: {
+  //     fontSize: "100px",
+  //     fontWeight: "bold",
+  //   },
+  // },
 });
