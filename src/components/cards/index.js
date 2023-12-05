@@ -10,6 +10,7 @@ import { bannerSubHeading, defaultBorder } from "../styling";
 import CustomRating from "../shared/CustomRating";
 import useMui from "../../hooks/useMui";
 import CustomLabel from "../shared/CustomLabel";
+import ProductPrice from "../shared/Product/ProductPrice";
 
 export const NewArrivalCard = ({ product, heading, showLabel }) => {
   const { BLACK } = useMui();
@@ -54,29 +55,7 @@ export const NewArrivalCard = ({ product, heading, showLabel }) => {
           {product?.title}
         </Typography>
         <Stack direction="row" spacing={3}>
-          <Typography
-            component={"p"}
-            sx={{
-              fontSize: "16px",
-              fontWeight: "500",
-              lineHeight: "26.25px",
-              textTransform: "uppercase",
-            }}
-          >
-            ${product?.price}
-          </Typography>
-          <Typography
-            component={"p"}
-            sx={{
-              fontSize: "16px",
-              fontWeight: "500",
-              lineHeight: "26.25px",
-              textTransform: "uppercase",
-              color: "#D9D9D9",
-            }}
-          >
-            ${product?.price}
-          </Typography>
+          <ProductPrice />
         </Stack>
       </CardContent>
     </Card >

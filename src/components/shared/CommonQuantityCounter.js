@@ -15,54 +15,30 @@ const QuantityIncrementer = () => {
     setQuantity(quantity + 1);
   };
 
+
+  const commonStyles = {
+    flex: 1,
+    display: 'grid',
+    placeItems: 'center'
+  }
   return (
-    <Box
-      sx={{
-        width: "250px",
-        height: "36px",
-        border: "1px solid #D9D9D9",
-        display: "flex",
-        boxSizing: "border-box",
-      }}
-    >
-      <Button
-        variant="text"
-        sx={{
-          flex: "1", // Added flex properties to fit within the box
-          backgroundColor: "white",
-          "&:hover": {
-            backgroundColor: "white",
-          },
-        }}
-        onClick={decreaseQuantity}
-      >
-        -
-      </Button>
-      <Button
-        variant="text"
-        sx={{
-          flex: "1", // Added flex properties to fit within the box
-          backgroundColor: "white",
-          "&:hover": {
-            backgroundColor: "white",
-          },
-        }}
-      >
-        {quantity}
-      </Button>
-      <Button
-        variant="text"
-        sx={{
-          flex: "1", // Added flex properties to fit within the box
-          backgroundColor: "white",
-          "&:hover": {
-            backgroundColor: "white",
-          },
-        }}
-        onClick={increaseQuantity}
-      >
+    <Box sx={{
+      width: "111px",
+      height: "36px",
+      border: "1px solid #D9D9D9",
+      display: "flex",
+      boxSizing: "border-box",
+      borderRadius: '6px'
+    }}>
+      <Box sx={commonStyles}>
+        --
+      </Box>
+      <Box sx={commonStyles}>
+        01
+      </Box>
+      <Box sx={commonStyles}>
         +
-      </Button>
+      </Box>
     </Box>
   );
 };

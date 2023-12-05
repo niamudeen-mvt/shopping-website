@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
-const CommonHeadingBox = ({ heading, subheading }) => {
+const CommonHeadingBox = ({ heading, subheading, mb = '0' }) => {
   const routeName = useLocation()?.pathname;
   const subheadingStyles = {
     fontSize: "18px",
@@ -21,7 +21,7 @@ const CommonHeadingBox = ({ heading, subheading }) => {
     textAlign: "center",
   };
   return (
-    <Box>
+    <Box sx={{ marginBottom: mb }}>
       <Typography variant="h4" sx={headingStyles}>
         {heading}
       </Typography>

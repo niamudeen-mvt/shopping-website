@@ -16,6 +16,7 @@ import CustomFeaturedProducts from "../../../components/shared/CustomFeaturedPro
 import CommonHeadingBox from "../../../components/shared/CommonHeadingBox";
 import CustomRating from "../../../components/shared/CustomRating";
 import CustomLabel from "../../../components/shared/CustomLabel";
+import ProductPrice from "../../../components/shared/Product/ProductPrice";
 
 const CommonContent = ({ heading, description }) => {
   return (
@@ -39,6 +40,11 @@ const CommonContent = ({ heading, description }) => {
     </Box>
   );
 };
+
+const CommonDivider = () => {
+  return <Divider sx={{ marginBottom: '20px' }} />
+}
+
 
 const ProductPage = () => {
   const { MD } = useMui();
@@ -70,20 +76,25 @@ const ProductPage = () => {
                   {[1, 2, 3, 4].map((e) => {
                     return (
                       <Grid item xs={6} key={e} >
+
                         <Box position='relative'>
-                          <CustomLabel
-                            text={"tuya"}
-                            width="65px"
-                            height="25px"
-                            bgColor={"#ff5722"}
-                            fontSize={"20px"}
-                            fontWeight={"bold"}
-                            lineHeight="14px"
-                            letterSpacing="2.1px"
-                            position="top-right"
-                            textStyle="lowercase"
-                            top="0"
-                          />
+                          {
+                            e !== 4 ?
+                              <CustomLabel
+                                text={"tuya"}
+                                width="65px"
+                                height="25px"
+                                bgColor={"#ff5722"}
+                                fontSize={"20px"}
+                                fontWeight={"bold"}
+                                lineHeight="14px"
+                                letterSpacing="2.1px"
+                                position="top-right"
+                                textStyle="lowercase"
+                                top="0"
+                              />
+                              : null
+                          }
                           <img src={defaultImg} alt="product-img" style={defaultBorder} />
                         </Box>
                       </Grid>
@@ -99,25 +110,20 @@ const ProductPage = () => {
                 >
                   Door Lock 2.0
                 </Typography>
-                <CustomRating count={5} color={""} />
-                <Stack direction="row" spacing={3} sx={commonMarginStyles}>
-                  <Typography component={"p"} sx={footerheading}>
-                    $54.58
-                  </Typography>
-                  <Typography component={"p"} sx={footerheading}>
-                    $122.00
-                  </Typography>
+                <CustomRating count={5} color={"#FF9000"} size="medium" />
+                <Stack direction="row" spacing={3} marginBottom={'20px'}>
+                  <ProductPrice />
                 </Stack>
-                <Divider sx={commonMarginStyles} />
+                <CommonDivider />
                 <Box sx={commonMarginStyles}>
                   <Typography component={"p"} sx={bannerSubHeading}>
                     Color
                   </Typography>
-                  <SelectDropDown width={"367px"} />
+                  <SelectDropDown width={"367px"} border={true} />
                 </Box>
-                <Divider sx={commonMarginStyles} />
+                <CommonDivider />
                 <Box sx={commonMarginStyles}>
-                  <Typography component={"p"} sx={bannerSubHeading}>
+                  <Typography component={"p"} sx={bannerSubHeading} marginBottom={'16px'}>
                     Quantity
                   </Typography>
                   <QuantityIncrementer />
@@ -143,20 +149,17 @@ const ProductPage = () => {
                     border={true}
                   />
                 </Stack>
-                <Divider sx={commonMarginStyles} />
+                <CommonDivider />
                 <CommonContent
                   heading={"Specifications"}
-                  description="Ways To Unlock: APP,Mechanical Keys,Password,Fingerprint
-Suitable Door Type: Steel Door,Wooden Door
-Special Features: Support Gateway
-Material: Zinc alloy"
+                  description="Ways To Unlock: APP,Mechanical Keys,Password,Fingerprint Suitable Door Type: Steel Door,Wooden Door Special Features: Support Gateway Material: Zinc alloy"
                 />
-                <Divider sx={commonMarginStyles} />
+                <CommonDivider />
                 <CommonContent
                   heading="Free Shipping"
                   description="Free standard shipping on all orders. for faster times please check delivery options times may vary depending on location."
                 />
-                <Divider sx={commonMarginStyles} />
+                <CommonDivider />
                 <CommonContent
                   heading={"Hassle-Free Exchanges"}
                   description={
@@ -166,9 +169,9 @@ Material: Zinc alloy"
               </Box>
             </Stack>
           </Box>
-          <CommonHeadingBox heading="Similar Products" />
+          <CommonHeadingBox heading="Similar Products" mb="40px" />
           <CustomFeaturedProducts searchResultCount="4" showDropDown={false} />
-          <CustomFeaturedProducts searchResultCount="8" showDropDown={false} />
+          <CustomFeaturedProducts searchResultCount="8" showDropDown={true} heading={"review"} />
         </CommonContainer>
       </Box>
     </>
