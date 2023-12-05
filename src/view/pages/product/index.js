@@ -1,10 +1,11 @@
-import { Box, Divider, Grid, Rating, Stack, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Divider, Grid, Rating, Stack, Typography } from "@mui/material";
 import CommonContainer from "../../../components/container";
 import defaultImg from "../../../assets/images/product.png";
 import dummyProductImg from "../../../assets/images/Accessories-img.png";
 import {
   bannerHeading,
   bannerSubHeading,
+  defaultBorder,
   footerheading,
 } from "../../../components/styling";
 import useMui from "../../../hooks/useMui";
@@ -14,6 +15,7 @@ import QuantityIncrementer from "../../../components/shared/CommonQuantityCounte
 import CustomFeaturedProducts from "../../../components/shared/CustomFeaturedProducts";
 import CommonHeadingBox from "../../../components/shared/CommonHeadingBox";
 import CustomRating from "../../../components/shared/CustomRating";
+import CustomLabel from "../../../components/shared/CustomLabel";
 
 const CommonContent = ({ heading, description }) => {
   return (
@@ -67,8 +69,23 @@ const ProductPage = () => {
                 <Grid container spacing={3}>
                   {[1, 2, 3, 4].map((e) => {
                     return (
-                      <Grid item xs={6} key={e}>
-                        <img src={dummyProductImg} alt="product-img" />
+                      <Grid item xs={6} key={e} >
+                        <Box position='relative'>
+                          <CustomLabel
+                            text={"tuya"}
+                            width="65px"
+                            height="25px"
+                            bgColor={"#ff5722"}
+                            fontSize={"20px"}
+                            fontWeight={"bold"}
+                            lineHeight="14px"
+                            letterSpacing="2.1px"
+                            position="top-right"
+                            textStyle="lowercase"
+                            top="0"
+                          />
+                          <img src={defaultImg} alt="product-img" style={defaultBorder} />
+                        </Box>
                       </Grid>
                     );
                   })}

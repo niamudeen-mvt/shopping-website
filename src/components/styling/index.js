@@ -41,3 +41,8 @@ export const footerCopyRight = {
   fontStyle: "normal",
   lineHeight: "30px",
 };
+
+
+export const defaultBorder = {
+  border: "1px solid  #D9D9D9"
+}

@@ -4,21 +4,19 @@ import {
   Box,
   Typography,
   Stack,
-  CardActionArea,
   CardMedia,
-  CardActions,
-  Button,
 } from "@mui/material";
-import { bannerSubHeading } from "../styling";
+import { bannerSubHeading, defaultBorder } from "../styling";
 import CustomRating from "../shared/CustomRating";
 import useMui from "../../hooks/useMui";
-import CustomButton from "../shared/CustomButton";
+import CustomLabel from "../shared/CustomLabel";
 
 export const NewArrivalCard = ({ product, heading, showLabel }) => {
   const { BLACK } = useMui();
   return (
     <Card
       sx={{
+        position: 'relative',
         maxWidth: 285,
         height: "100%",
         ":hover": {
@@ -26,9 +24,9 @@ export const NewArrivalCard = ({ product, heading, showLabel }) => {
         },
       }}
     >
-      <Box p={3} border={"1px solid #D9D9D9"}>
+      <Box p={3} sx={defaultBorder}>
         {showLabel ? (
-          <CustomButton
+          <CustomLabel
             text={"sale"}
             width="65px"
             height="20px"
@@ -81,6 +79,6 @@ export const NewArrivalCard = ({ product, heading, showLabel }) => {
           </Typography>
         </Stack>
       </CardContent>
-    </Card>
+    </Card >
   );
 };
