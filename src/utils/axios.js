@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
-const BASE_URL = "https://fakestoreapi.com/products";
+const BASE_URL = 'https://fakestoreapi.com/products';
 
 export const api = axios.create({
-  baseURL: BASE_URL,
+    baseURL: BASE_URL,
 });

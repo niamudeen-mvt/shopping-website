@@ -1,40 +1,40 @@
 /* ========== USED CSS ======================= */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  box-shadow: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none !important;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 a {
-  text-decoration: none;
-  color: var(--black-clr);
+    text-decoration: none;
+    color: var(--black-clr);
 }
 
 img {
-  max-width: 100%;
-  height: 100%;
+    max-width: 100%;
+    height: 100%;
 }
 
 .common_banner_section {
-  min-height: 284px;
-  background-image: url("../images/common-banner-section.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    min-height: 284px;
+    background-image: url('../images/common-banner-section.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .common_margin {
-  margin-bottom: 86px;
+    margin-bottom: 86px;
 }
 
 .custom_categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 50px;
 }
