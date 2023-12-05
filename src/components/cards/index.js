@@ -8,12 +8,10 @@ import {
 } from "@mui/material";
 import { bannerSubHeading, defaultBorder } from "../styling";
 import CustomRating from "../shared/CustomRating";
-import useMui from "../../hooks/useMui";
 import CustomLabel from "../shared/CustomLabel";
 import ProductPrice from "../shared/Product/ProductPrice";
 
 export const NewArrivalCard = ({ product, heading, showLabel }) => {
-  const { BLACK } = useMui();
   return (
     <Card
       sx={{
@@ -49,9 +47,9 @@ export const NewArrivalCard = ({ product, heading, showLabel }) => {
       <CardContent>
         <CustomRating
           count={product?.rating?.rate}
-          color={heading === "New Arrivals" ? BLACK : ""}
+          color={heading === "New Arrivals" ? "BLACK" : "DEFAULT"}
         />
-        <Typography gutterBottom component="p" sx={bannerSubHeading}>
+        <Typography gutterBottom variant="body2" fontWeight={500} lineHeight={'26.5px'}>
           {product?.title}
         </Typography>
         <Stack direction="row" spacing={3}>

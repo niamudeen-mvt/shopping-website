@@ -28,10 +28,6 @@ const productDetails =
 
 
 
-
-
-
-
 const CustomFeaturedProducts = ({
   searchResultCount = 8,
   heading,
@@ -63,7 +59,7 @@ const CustomFeaturedProducts = ({
     <Box className="common_margin">
       {
         showDropDown && routeName !== "/product-page" ?
-          <Box sx={flexSBStyles}>
+          <Box sx={flexSBStyles} marginBottom={'40px'}>
             <Typography
               component={"p"}
               fontSize={"14px"}
@@ -72,7 +68,7 @@ const CustomFeaturedProducts = ({
             >
               Showing 11 of 11 products
             </Typography>
-            <SelectDropDown width="164px" height="36px" defaultValue="Featured" />
+            <SelectDropDown width="164px" height="36px" defaultValue="Featured" border={true} />
           </Box> : null
       }
 

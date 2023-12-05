@@ -4,6 +4,7 @@ import Select from "@mui/material/Select";
 import { Stack } from "@mui/material";
 import americaFlagIcon from "../../assets/icons/america-flag-icon.svg";
 import { useState } from "react";
+import { flexCenterStyles } from "../styling";
 
 const menuItems = ["option1", "option2", "option3"];
 
@@ -32,7 +33,7 @@ const CustomDropDown = ({
   };
 
   return (
-    <Stack direction="row">
+    <Stack direction="row" sx={flexCenterStyles} >
       {selectedValue === "English" || selectedValue === "Featured" ? null : (
         <img src={americaFlagIcon} alt="america-flag-icon" style={imgStyles} />
       )}

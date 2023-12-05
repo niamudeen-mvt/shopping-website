@@ -4,6 +4,7 @@ import { menuItems } from './utils/menu-items';
 import ProductPage from './view/pages/product';
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>

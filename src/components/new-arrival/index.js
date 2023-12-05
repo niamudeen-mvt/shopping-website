@@ -8,7 +8,7 @@ const NewArrivalPage = () => {
   return (
     <Box className="common_section_margin ">
       <CommonContainer maxWidth="lg">
-        <CommonHeadingBox heading="New Arrivals" />
+        <CommonHeadingBox heading="New Arrivals" mb="30px" />
         <CustomFeaturedProducts searchResultCount={4} heading="New Arrivals" />
       </CommonContainer>
     </Box>

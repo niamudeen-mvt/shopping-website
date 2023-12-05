@@ -9,7 +9,7 @@ import CommonContentSecion from "../shared/CommonContentSecion";
 
 const DropCollection = () => {
   return (
-    <Box className="common_section">
+    <Box className="common_margin">
       <Container className="common_section_height">
         <CommonHeadingBox heading="The Drops Collection" />
         <Grid container mt={4} spacing={3}>

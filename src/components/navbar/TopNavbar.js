@@ -69,8 +69,8 @@ const TopNavbar = (props) => {
           {isMatches ? (
             <>
               <Stack direction={"row"} spacing={1} sx={{ flexGrow: 1 }}>
-                <Typography color="error">SHOP15</Typography>
-                <Typography color={WHITE}>
+                <Typography variant="caption" fontWeight={700} color="error">SHOP15</Typography>
+                <Typography variant="caption" color={WHITE}>
                   For 15 Percent Off Your order!
                 </Typography>
               </Stack>

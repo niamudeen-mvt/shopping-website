@@ -23,7 +23,7 @@ import ArrowRightAltOutlinedIcon from "@mui/icons-material/ArrowRightAltOutlined
 const CustomHeading = ({ text }) => {
   return (
     <>
-      <Typography component="p" mb={3} sx={bannerSubHeading}>
+      <Typography variant="body2" fontWeight={600} lineHeight={'30px'} mb={3} >
         {text}
       </Typography>
     </>
@@ -32,7 +32,7 @@ const CustomHeading = ({ text }) => {
 
 const CustomDescription = ({ text }) => {
   return (
-    <Typography component="p" sx={footerheading}>
+    <Typography variant="body1" lineHeight={'30px'}>
       {text}
     </Typography>
   );
@@ -73,10 +73,10 @@ const FooterSection = () => {
     >
       <CommonContainer maxWidth="lg">
         <Typography
-          component="p"
-          sx={footerheading}
+          variant="body1"
           textAlign="center"
           marginBottom={"50px"}
+          lineHeight={'30px'}
         >
           Fast shipping times! if any information regarding shipping times or
           order tracking please email us. we will <br /> respond within one
@@ -159,8 +159,7 @@ const FooterSection = () => {
           </Grid>
           <Grid item xs={12} md={4} sx={commonBoxStyles}>
             <Typography
-              component="p"
-              sx={footerCopyRight}
+              variant="caption"
               textAlign={MD ? "center" : "start"}
             >
               © The Drops 2022
@@ -168,8 +167,7 @@ const FooterSection = () => {
           </Grid>
           <Grid item xs={12} md={4} sx={commonBoxStyles}>
             <Typography
-              component="p"
-              sx={footerCopyRight}
+              variant="caption"
               color="#FFFFFF"
               textAlign={MD ? "end" : "start"}
             >

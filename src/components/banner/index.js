@@ -7,7 +7,7 @@ import CustomButton from "../shared/CustomButton";
 const BannerSection = () => {
   const { SM } = useMui();
   return (
-    <Grid container sx={{ minHeight: "500px", bgcolor: "#E7E5E1" }}>
+    <Grid container sx={{ minHeight: "500px", bgcolor: "#E7E5E1" }} className="common_margin">
       <Grid item xs={12} md={6} sx={{ padding: SM ? "100px 0" : "0" }}>
         <Box
           height="100%"
@@ -17,22 +17,17 @@ const BannerSection = () => {
           alignItems="center"
         >
           <Stack direction="column" justifyContent="left" spacing={2}>
-            <Typography variant="h5" fontStyle={"normal"} fontWeight={400}>
+            <Typography variant="h5">
               New Arrivals
             </Typography>
             <Typography
-              variant="h3"
-              fontWeight={700}
-              textTransform={"uppercase"}
+              variant="h1"
             >
               Shockwave <br />
               Protection Case
             </Typography>
             <Typography
               variant="h5"
-              textTransform={"capitalize"}
-              fontStyle={"normal"}
-              fontWeight={400}
             >
               You just want something new to spice up <br /> your door
             </Typography>

@@ -11,7 +11,6 @@ const CustomDrops = () => {
           variant="h4"
           mb={6}
           textAlign="center"
-          fontWeight={700}
           lineHeight="47.5px"
         >
           Express yourself with <br /> #TheDrops255 on instagram

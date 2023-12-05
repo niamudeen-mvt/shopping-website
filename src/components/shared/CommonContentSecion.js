@@ -1,17 +1,18 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react'
 import CustomButton from './CustomButton';
+import { flexCenterStyles } from '../styling';
 
 const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
   return (
-    <Box textTransform={'capitalize'} fontStyle={'normal'} >
-      <Typography variant="h5" fontSize={26} fontWeight={500} marginBottom={'30px'}>
+    <Box textTransform={'capitalize'} fontStyle={'normal'} sx={{ ...flexCenterStyles, flexDirection: 'column' }}>
+      <Typography variant="h5" fontSize={26} fontWeight={500} marginBottom={'14px'} >
         {heading}
       </Typography>
-      <Typography variant="body1" fontSize={18} fontWeight={400} lineHeight={'24px'} marginBottom={'30px'} color="#000000">
+      <Typography variant="body2" lineHeight={'24px'} marginBottom={'30px'} color="#000000" >
         {
           subheading ? subheading : `You just want something new to spice up
-        <br /> your door`
+         your door`
         }
       </Typography>
       <CustomButton

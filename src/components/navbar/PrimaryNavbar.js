@@ -14,7 +14,6 @@ import { menuItems } from '../../utils/menu-items'
 
 const PrimaryNavbar = (props) => {
 
-
   const routeName = useLocation()?.pathname
 
   const { window } = props;
@@ -80,7 +79,7 @@ const PrimaryNavbar = (props) => {
                     <img src={userIcon} alt="user-icon" />
                   </IconButton>
                   <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-                    <Badge badgeContent={4} color="error">
+                    <Badge badgeContent={4} color="info">
                       <img src={likeIcon} alt="like-icon" />
                     </Badge>
                   </IconButton>
@@ -89,7 +88,7 @@ const PrimaryNavbar = (props) => {
                     aria-label="show 17 new notifications"
                     color="inherit"
                   >
-                    <Badge badgeContent={17} color="error">
+                    <Badge badgeContent={17} color="info">
                       <img src={shoppingBag} alt="shopping-bag-icon" />
                     </Badge>
                   </IconButton>
