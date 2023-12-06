@@ -1,18 +1,17 @@
-import React from 'react';
-import { Box } from '@mui/material';
+import React, { useState } from 'react';
 
 const QuantityIncrementer = () => {
-    // const [quantity, setQuantity] = useState(1);
+    const [quantity, setQuantity] = useState(1);
 
-    // const decreaseQuantity = () => {
-    //     if (quantity > 1) {
-    //         setQuantity(quantity - 1);
-    //     }
-    // };
+    const decreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
 
-    // const increaseQuantity = () => {
-    //     setQuantity(quantity + 1);
-    // };
+    const increaseQuantity = () => {
+        setQuantity(quantity + 1);
+    };
 
     const commonStyles = {
         flex: 1,
@@ -20,8 +19,8 @@ const QuantityIncrementer = () => {
         placeItems: 'center',
     };
     return (
-        <Box
-            sx={{
+        <div
+            style={{
                 width: '111px',
                 height: '36px',
                 border: '1px solid #D9D9D9',
@@ -30,10 +29,10 @@ const QuantityIncrementer = () => {
                 borderRadius: '6px',
             }}
         >
-            <Box sx={commonStyles}>--</Box>
-            <Box sx={commonStyles}>01</Box>
-            <Box sx={commonStyles}>+</Box>
-        </Box>
+            <div style={commonStyles} onClick={decreaseQuantity}>-</div>
+            <div style={commonStyles}>{quantity < 10 ? `0${quantity}` : quantity}</div>
+            <div style={commonStyles} onClick={increaseQuantity}>+</div>
+        </div>
     );
 };
 
