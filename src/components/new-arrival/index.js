@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import CommonHeadingBox from '../shared/CommonHeadingBox';
 import CustomFeaturedProducts from '../shared/CustomFeaturedProducts';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 
 const NewArrivalPage = () => {
     return (

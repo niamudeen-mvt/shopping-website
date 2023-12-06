@@ -1,5 +1,5 @@
 import { Box, Divider, Grid, Stack, Typography } from '@mui/material';
-import CommonContainer from '../../../components/container';
+import CommonContainer from '../../../components/shared/container';
 import defaultImg from '../../../assets/images/product.png';
 import { defaultBorder } from '../../../components/styling';
 import useMui from '../../../hooks/useMui';
@@ -40,7 +40,7 @@ const CommonDivider = () => {
 };
 
 const ProductPage = () => {
-    const { MD } = useMui();
+    const { MD, SM } = useMui();
 
     const commonMarginStyles = {
         marginBottom: '30px',
@@ -132,7 +132,7 @@ const ProductPage = () => {
                                         Color
                                     </Typography>
                                     <CustomSelect
-                                        width={'367px'}
+                                        width={SM ? '367px' : '200px'}
                                         type={'dark'}
                                         options={[
                                             { value: 1, label: 'Silver Type' },

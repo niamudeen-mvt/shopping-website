@@ -12,6 +12,8 @@ export const flexCenterStyles = {
     alignItems: 'center',
 };
 
+
+
 // =============== FONTS STYLES =================
 
 export const defaultBorder = {

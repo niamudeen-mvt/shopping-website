@@ -1,7 +1,7 @@
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import React from 'react';
 import CustomButton from '../../components/shared/CustomButton';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import { flexCenterStyles } from '../styling';
 
 const CustomContentBar = ({

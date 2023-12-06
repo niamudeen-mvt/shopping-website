@@ -5,7 +5,8 @@ import deliverySvg from '../../assets/icons/delivery.svg';
 import shippingSvg from '../../assets/icons/shipping.svg';
 import moneySvg from '../../assets/icons/money.svg';
 import securitySvg from '../../assets/icons/security.svg';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
+import useMui from '../../hooks/useMui';
 
 const categoryData = [
     {
@@ -33,6 +34,8 @@ const categoryData = [
 const CustomCategories = ({ border = false }) => {
     const GREY_COLOR = 'rgba(0, 0, 0, 0.08)';
 
+    const { SM } = useMui()
+
     return (
         <Box
             className="common_margin"
@@ -45,7 +48,7 @@ const CustomCategories = ({ border = false }) => {
                 <div className="custom_categories">
                     {categoryData?.map((category, index) => {
                         return (
-                            <Stack direction={'row'} spacing={2}>
+                            <Stack direction={'row'} spacing={2} justifyContent={SM ? 'start' : 'center'}>
                                 <img
                                     src={category.img}
                                     alt={category.title}

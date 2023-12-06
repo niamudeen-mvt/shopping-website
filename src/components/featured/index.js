@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import CommonHeadingBox from '../shared/CommonHeadingBox';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import CustomFeaturedProducts from '../shared/CustomFeaturedProducts';
 
 const FeaturedProducts = () => {

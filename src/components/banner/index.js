@@ -9,10 +9,10 @@ const BannerSection = () => {
     return (
         <Grid
             container
-            sx={{ minHeight: '500px', bgcolor: '#E7E5E1' }}
+            sx={{ minHeight: '500px', bgcolor: '#E7E5E1', padding: SM ? '0' : '0 25px' }}
             className="common_margin"
         >
-            <Grid item xs={12} md={6} sx={{ padding: SM ? '100px 0' : '0' }}>
+            <Grid item xs={12} md={6} sx={{ padding: SM ? '0' : '25px 0' }}>
                 <Box
                     height="100%"
                     width="100%"
@@ -21,12 +21,12 @@ const BannerSection = () => {
                     alignItems="center"
                 >
                     <Stack direction="column" justifyContent="left" spacing={2}>
-                        <Typography variant="h5">New Arrivals</Typography>
-                        <Typography variant="h1">
+                        <Typography variant="h5" fontSize={SM ? '26px' : '22px'}>New Arrivals</Typography>
+                        <Typography variant="h1" fontSize={SM ? '48px' : '40px'}>
                             Shockwave <br />
                             Protection Case
                         </Typography>
-                        <Typography variant="h5">
+                        <Typography variant="h5" fontSize={SM ? '26px' : '22px'}>
                             You just want something new to spice up <br /> your
                             door
                         </Typography>

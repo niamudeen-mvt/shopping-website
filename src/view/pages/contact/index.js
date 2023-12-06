@@ -10,10 +10,14 @@ import {
     TextField,
     Typography,
 } from '@mui/material';
-import CommonContainer from '../../../components/container';
+import CommonContainer from '../../../components/shared/container';
 import CustomButton from '../../../components/shared/CustomButton';
 
 import phoneSvg from '../../../assets/icons/icon _phone call_.svg';
+import instaSvg from '../../../assets/icons/icon _instagram fill_.svg';
+import musicSvg from '../../../assets/icons/icon_music.svg';
+import emailSvg from '../../../assets/icons/icon _Email_.svg';
+import useMui from '../../../hooks/useMui';
 
 const CommonHeading = ({ text, mb }) => {
     return (
@@ -23,11 +27,14 @@ const CommonHeading = ({ text, mb }) => {
     );
 };
 const CommonDescription = ({ text, mb }) => {
+    const { PARAGRAPH } = useMui()
     return (
         <Typography
-            variant="body2"
+            fontSize={PARAGRAPH.fontSize}
+            fontWeight={PARAGRAPH.fontWeight}
             marginBottom={mb ? '32px' : '0'}
-            lineHeight={'24px'}
+            lineHeight={PARAGRAPH.lineHeight}
+            color={PARAGRAPH.color}
         >
             {text}
         </Typography>
@@ -108,10 +115,9 @@ const ContactPage = () => {
                                         }}
                                     >
                                         <Checkbox {...label} />
-                                        <CommonDescription
-                                            text="Save my name, email, and website in this browser for the next time I comment."
-                                            mb={false}
-                                        />
+                                        <Typography variant='body1' lineHeight={'24px'}>
+                                            Save my name, email, and website in this browser for the next time I comment.
+                                        </Typography>
                                     </Stack>
                                     <CustomButton
                                         text="Submit Now"
@@ -133,8 +139,10 @@ const ContactPage = () => {
                                     <CommonHeading text="Contact Information" />
                                     <Stack
                                         direction={'row'}
-                                        spacing={1}
+                                        spacing={2}
                                         alignItems={'center'}
+                                        mb={2}
+
                                     >
                                         <img
                                             src={phoneSvg}
@@ -146,13 +154,32 @@ const ContactPage = () => {
                                         />
                                         <CommonDescription text="9022107764" />
                                     </Stack>
+                                    <Stack
+                                        direction={'row'}
+                                        spacing={2}
+                                        alignItems={'center'}
+                                        mb={2}
+
+                                    >
+                                        <img
+                                            src={emailSvg}
+                                            alt="icon"
+                                            style={{
+                                                height: '16px',
+                                                width: '16px',
+                                            }}
+                                        />
+                                        <CommonDescription text="TheDrops255@gmail.com" />
+                                    </Stack>
                                 </Box>
                                 <Box>
                                     <CommonHeading text="Social Media" />
                                     <Stack
                                         direction={'row'}
-                                        spacing={1}
+                                        spacing={2}
                                         alignItems={'center'}
+                                        mb={2}
+
                                     >
                                         <img
                                             src={phoneSvg}
@@ -166,33 +193,37 @@ const ContactPage = () => {
                                     </Stack>
                                     <Stack
                                         direction={'row'}
-                                        spacing={1}
+                                        spacing={2}
                                         alignItems={'center'}
+                                        mb={2}
+
                                     >
                                         <img
-                                            src={phoneSvg}
+                                            src={instaSvg}
                                             alt="icon"
                                             style={{
                                                 height: '16px',
                                                 width: '16px',
                                             }}
                                         />
-                                        <CommonDescription text="@TheDrops" />
+                                        <CommonDescription text="@TheDrops255" />
                                     </Stack>
                                     <Stack
                                         direction={'row'}
-                                        spacing={1}
+                                        spacing={2}
                                         alignItems={'center'}
+                                        mb={2}
+
                                     >
                                         <img
-                                            src={phoneSvg}
+                                            src={musicSvg}
                                             alt="icon"
                                             style={{
                                                 height: '16px',
                                                 width: '16px',
                                             }}
                                         />
-                                        <CommonDescription text="@TheDrops" />
+                                        <CommonDescription text="@TheDrops255" />
                                     </Stack>
                                 </Box>
                             </Stack>

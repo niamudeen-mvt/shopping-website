@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material';
 import CustomCommonBanner from '../../../components/shared/CustomCommonBanner';
-import CommonContainer from '../../../components/container';
+import CommonContainer from '../../../components/shared/container';
 import productImg from '../../../assets/images/Accessories-img.png';
 import CommonContentSecion from '../../../components/shared/CommonContentSecion';
 import CustomContentBar from '../../../components/shared/CustomContentBar';
@@ -42,10 +42,11 @@ const AboutUsPage = () => {
                 >
                     <Grid container spacing={10}>
                         <Grid xs={12} md={6} item>
-                            <Box maxWidth={'588px'}>
+                            <Box maxWidth={'588px'} height={'455px'}>
                                 <img
                                     src={productImg}
                                     alt="drop-collection-img1"
+                                    style={{ width: '100%' }}
                                 />
                             </Box>
                         </Grid>

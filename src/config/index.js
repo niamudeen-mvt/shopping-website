@@ -113,11 +113,14 @@ export const theme = createTheme({
             },
         },
     },
-    // custom: {
-    //   mango: "purple",
-    //   para: {
-    //     fontSize: "100px",
-    //     fontWeight: "bold",
-    //   },
-    // },
+    custom: {
+        paragraph: {
+            fontSize: '18px',
+            fontWeight: '400',
+            lineHeight: '24px',
+            textTransform: 'capitalize',
+            fontStyle: 'normal',
+            color: '#000000'
+        }
+    }
 });

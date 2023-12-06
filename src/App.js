@@ -10,14 +10,14 @@ function App() {
                 <Route path="/" element={<PublicRoutes />}>
                     {menuItems?.length
                         ? menuItems?.map((e) => {
-                              return (
-                                  <Route
-                                      key={e?.id}
-                                      path={e?.url}
-                                      element={e?.element}
-                                  />
-                              );
-                          })
+                            return (
+                                <Route
+                                    key={e?.id}
+                                    path={e?.url}
+                                    element={e?.element}
+                                />
+                            );
+                        })
                         : null}
                     <Route path={'/product-page'} element={<ProductPage />} />
                 </Route>

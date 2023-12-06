@@ -3,7 +3,7 @@ import CustomCommonBanner from '../../../components/shared/CustomCommonBanner';
 import CustomDrops from '../../../components/shared/CustomDrops';
 import CustomCategories from '../../../components/shared/CustomCategoires';
 import CustomFeaturedProducts from '../../../components/shared/CustomFeaturedProducts';
-import CommonContainer from '../../../components/container';
+import CommonContainer from '../../../components/shared/container';
 
 const ShopPage = () => {
     return (

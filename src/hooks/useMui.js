@@ -1,12 +1,6 @@
 import { useTheme } from '@emotion/react';
 import { useMediaQuery } from '@mui/material';
 
-// xs, : 0px
-// sm, : 600px
-// md, : 900px
-// lg, : 1200px
-// xl, : 1536px
-
 const useMui = () => {
     const theme = useTheme();
 
@@ -17,8 +11,15 @@ const useMui = () => {
     const WHITE = theme.palette.success.main;
     const BLACK = theme.palette.info.main;
     const ORANGE = theme.palette.warning.main;
+    const PARAGRAPH = theme.custom.paragraph
 
-    return { LG, MD, SM, WHITE, BLACK, ORANGE };
+    return { LG, MD, SM, WHITE, BLACK, ORANGE, PARAGRAPH };
 };
 
 export default useMui;
+
+// xs, : 0px
+// sm, : 600px
+// md, : 900px
+// lg, : 1200px
+// xl, : 1536px

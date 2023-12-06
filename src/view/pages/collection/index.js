@@ -1,10 +1,15 @@
-import { Box, Container, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
 import defaultImg from '../../../assets/images/Accessories-img.png';
 import CustomCommonBanner from '../../../components/shared/CustomCommonBanner';
 import CustomCategories from '../../../components/shared/CustomCategoires';
 import CustomPagination from '../../../components/shared/CustomPagination';
 import CustomDrops from '../../../components/shared/CustomDrops';
+import img2 from "../../../assets/images/drop-collection-img1.png"
+import img3 from "../../../assets/images/Best Seller.png"
+import img4 from "../../../assets/images/drop-collection-img2.png"
+import img5 from "../../../assets/images/banner-section-img.png"
+import CommonContainer from '../../../components/shared/container';
 
 const collections = [
     {
@@ -15,27 +20,27 @@ const collections = [
     {
         id: 2,
         title: 'Home & Decor',
-        img: defaultImg,
+        img: img2,
     },
     {
         id: 3,
         title: 'Best Seller',
-        img: defaultImg,
+        img: img3,
     },
     {
         id: 4,
         title: 'New Arrivals',
-        img: defaultImg,
+        img: img4,
     },
     {
         id: 5,
         title: 'Electronic',
-        img: defaultImg,
+        img: img5,
     },
     {
         id: 6,
         title: 'Phone Case',
-        img: defaultImg,
+        img: img4,
     },
     {
         id: 7,
@@ -45,7 +50,7 @@ const collections = [
     {
         id: 8,
         title: 'Lifestyle',
-        img: defaultImg,
+        img: img3,
     },
 ];
 
@@ -54,8 +59,8 @@ const CollectionPage = () => {
         <>
             <CustomCommonBanner />
             <Box mb={10}>
-                <Container maxWidth="lg">
-                    <Grid container rowGap={3} columnSpacing={3}>
+                <CommonContainer maxWidth="lg">
+                    <Grid container rowGap={10} columnSpacing={3} marginBottom={'150px'}>
                         {collections.map((menu, index) => {
                             return (
                                 <Grid
@@ -66,9 +71,9 @@ const CollectionPage = () => {
                                     md={6}
                                     lg={4}
                                 >
-                                    <Box maxWidth="386px" mx={'auto'}>
+                                    <Box maxWidth="386px" height={'342px'} mx={'auto'}>
                                         <img
-                                            src={defaultImg}
+                                            src={menu.img}
                                             alt="defautl-img"
                                         />
                                         <Typography
@@ -84,8 +89,10 @@ const CollectionPage = () => {
                             );
                         })}
                     </Grid>
-                    <CustomPagination />
-                </Container>
+                    <Box>
+                        <CustomPagination />
+                    </Box>
+                </CommonContainer>
             </Box>
             <CustomCategories border={true} />
             <CustomDrops />

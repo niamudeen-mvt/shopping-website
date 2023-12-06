@@ -1,15 +1,18 @@
 import { useState } from 'react';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import { Stack, Box, IconButton, Typography } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import { flexSBStyles } from '../styling';
 import CustomDrawer from '../shared/CustomDrawer';
 import useMui from '../../hooks/useMui';
 import CustomSelect from '../shared/CustomSelect';
+
+import MenuIcon from "@mui/icons-material/Menu"
+import FacebookIcon from '../../assets/icons/icon _social facebook_.svg';
+import InstagramIcon from '../../assets/icons/icon _instagram_white_.svg';
+import TwitterIcon from '../../assets/icons/icon _twitter_.svg';
+import MusicNoteIcon from '../../assets/icons/icon _logo tiktok_.svg';
+
+
 
 const TopNavbar = (props) => {
     const { window } = props;
@@ -64,10 +67,14 @@ const TopNavbar = (props) => {
             <CommonContainer>
                 <Box sx={flexSBStyles} minHeight={'44px'}>
                     <Stack direction="row" spacing={3} sx={{ flexGrow: 1 }}>
-                        <FacebookIcon sx={iconStyles} />
+                        {/* <FacebookIcon sx={iconStyles} />
                         <TwitterIcon sx={iconStyles} />
                         <InstagramIcon sx={iconStyles} />
-                        <MusicNoteIcon sx={iconStyles} />
+                        <MusicNoteIcon sx={iconStyles} /> */}
+                        <img src={FacebookIcon} alt='fb' />
+                        <img src={TwitterIcon} alt='fb' />
+                        <img src={InstagramIcon} alt='fb' />
+                        <img src={MusicNoteIcon} alt='fb' />
                     </Stack>
                     {isMatches ? (
                         <>
@@ -109,14 +116,14 @@ const TopNavbar = (props) => {
                         </IconButton>
                     )}
                 </Box>
-            </CommonContainer>
+            </CommonContainer >
             <CustomDrawer
                 mobileOpen={mobileOpen}
                 handleDrawerToggle={handleDrawerToggle}
                 window={window}
                 drawer={drawer}
             />
-        </Box>
+        </Box >
     );
 };
 

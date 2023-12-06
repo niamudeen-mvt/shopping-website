@@ -2,8 +2,10 @@ import { Box, Typography } from '@mui/material';
 import React from 'react';
 import CustomButton from './CustomButton';
 import { flexCenterStyles } from '../styling';
+import { useLocation } from 'react-router-dom';
 
 const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
+    const routeName = useLocation()?.pathname
     return (
         <Box
             textTransform={'capitalize'}
@@ -24,16 +26,31 @@ const CommonContentSecion = ({ heading, subheading, btnText, btnColor }) => {
                     : `You just want something new to spice up
          your door`}
             </Typography>
-            <CustomButton
-                bgColor={btnColor}
-                text={btnText ? btnText : 'Shop Now'}
-                height="46px"
-                width="155px"
-                borderRadius="26px"
-                textStyle="capitalize"
-                fontSize="18px"
-                fontWeight="600px"
-            />
+            {
+                routeName === "/about-us" ?
+                    <Box width={'100%'} display={'flex'} justifyContent={'start'}>
+                        <CustomButton
+                            bgColor={btnColor}
+                            text={btnText ? btnText : 'Shop Now'}
+                            height="46px"
+                            width="155px"
+                            borderRadius="26px"
+                            textStyle="capitalize"
+                            fontSize="18px"
+                            fontWeight="600px"
+                        />
+                    </Box> :
+                    <CustomButton
+                        bgColor={btnColor}
+                        text={btnText ? btnText : 'Shop Now'}
+                        height="46px"
+                        width="155px"
+                        borderRadius="26px"
+                        textStyle="capitalize"
+                        fontSize="18px"
+                        fontWeight="600px"
+                    />
+            }
         </Box>
     );
 };

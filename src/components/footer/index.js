@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { flexCenterStyles } from '../styling';
 import americaFlagIcon from '../../assets/icons/america-flag-icon.svg';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import useMui from '../../hooks/useMui';
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';

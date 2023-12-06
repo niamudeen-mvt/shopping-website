@@ -11,6 +11,7 @@ import productImg2 from '../../assets/images/product2.png';
 import ProductPageCard from './Product/ProductPageCard';
 import useMui from '../../hooks/useMui';
 import CustomSelect from './CustomSelect';
+import CustomLoader from './CustomLoader';
 
 const productDetails = {
     id: 1,
@@ -35,10 +36,9 @@ const CustomFeaturedProducts = ({
     useEffect(() => {
         (async () => {
             const data = await newArrivalProductsList(searchResultCount);
-            console.log(productList);
             setProductList(data);
         })();
-    }, []);
+    }, [searchResultCount]);
 
     const reviewHeadingStyles = {
         display: 'flex',
@@ -124,45 +124,45 @@ const CustomFeaturedProducts = ({
             <Grid container spacing={2}>
                 {productList?.length
                     ? productList?.map((product, index) => {
-                          return (
-                              <Grid
-                                  key={index}
-                                  item
-                                  xs={12}
-                                  sm={6}
-                                  md={4}
-                                  lg={3}
-                                  display="flex"
-                                  justifyContent={'center'}
-                              >
-                                  <Link to={`/product-page`}>
-                                      {routeName === '/product-page' &&
-                                      heading === 'review' ? (
-                                          <ProductPageCard
-                                              product={productDetails}
-                                              heading={heading}
-                                              showLabel={
-                                                  index === 1 || index === 7
-                                                      ? true
-                                                      : false
-                                              }
-                                          />
-                                      ) : (
-                                          <NewArrivalCard
-                                              product={product}
-                                              heading={heading}
-                                              showLabel={
-                                                  index === 1 || index === 7
-                                                      ? true
-                                                      : false
-                                              }
-                                          />
-                                      )}
-                                  </Link>
-                              </Grid>
-                          );
-                      })
-                    : 'No Products'}
+                        return (
+                            <Grid
+                                key={index}
+                                item
+                                xs={12}
+                                sm={6}
+                                md={4}
+                                lg={3}
+                                display="flex"
+                                justifyContent={'center'}
+                            >
+                                <Link to={`/product-page`}>
+                                    {routeName === '/product-page' &&
+                                        heading === 'review' ? (
+                                        <ProductPageCard
+                                            product={productDetails}
+                                            heading={heading}
+                                            showLabel={
+                                                index === 1 || index === 7
+                                                    ? true
+                                                    : false
+                                            }
+                                        />
+                                    ) : (
+                                        <NewArrivalCard
+                                            product={product}
+                                            heading={heading}
+                                            showLabel={
+                                                index === 1 || index === 7
+                                                    ? true
+                                                    : false
+                                            }
+                                        />
+                                    )}
+                                </Link>
+                            </Grid>
+                        );
+                    })
+                    : <CustomLoader />}
             </Grid>
             {routeName === '/product-page' ? null : <CustomPagination />}
         </Box>

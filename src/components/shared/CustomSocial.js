@@ -1,12 +1,13 @@
 import React from 'react';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import { Box, Stack, Typography } from '@mui/material';
 import { flexCenterStyles } from '../styling';
 import productImg1 from '../../assets/images/banner-section-img.png';
 import useMui from '../../hooks/useMui';
+import wathcImg from "../../assets/images/watch.png"
 
 const CustomSocial = ({ heading, socialIconList }) => {
-    const { LG, MD } = useMui();
+    const { LG, MD, SM } = useMui();
     return (
         <Box mb={10}>
             <CommonContainer maxWidth="lg">
@@ -67,6 +68,7 @@ const CustomSocial = ({ heading, socialIconList }) => {
                     sx={flexCenterStyles}
                     marginTop={'100px'}
                     position={'relative'}
+                    px={SM ? 0 : '25px'}
                 >
                     {LG ? (
                         <Box
@@ -101,7 +103,7 @@ const CustomSocial = ({ heading, socialIconList }) => {
                             top={0}
                             right={0}
                         >
-                            <img src={productImg1} alt="product" />
+                            <img src={wathcImg} alt="product" />
                         </Box>
                     ) : null}
                 </Box>

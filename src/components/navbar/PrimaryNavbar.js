@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
     Box,
     Stack,
     Typography,
     IconButton,
     Badge,
-    ListItem,
-    List,
-    ListItemButton,
-    ListItemText,
 } from '@mui/material';
 import brandImage from '../../assets/icons/brand-logo.svg';
-import { Link, useLocation } from 'react-router-dom';
 import searchIcon from '../../assets/icons/search-icon.svg';
 import userIcon from '../../assets/icons/user-icon.svg';
 import likeIcon from '../../assets/icons/like-icon.svg';
 import shoppingBag from '../../assets/icons/shopping-bag-icon.svg';
 import MenuIcon from '@mui/icons-material/Menu';
-import CommonContainer from '../container';
+import CommonContainer from '../shared/container';
 import CustomDrawer from '../shared/CustomDrawer';
-import useMui from '../../hooks/useMui';
 import { menuItems } from '../../utils/menu-items';
+import useMui from '../../hooks/useMui';
 
 const PrimaryNavbar = (props) => {
     const routeName = useLocation()?.pathname;
@@ -38,15 +34,25 @@ const PrimaryNavbar = (props) => {
             onClick={handleDrawerToggle}
             sx={{ textAlign: 'center', padding: '100px 0' }}
         >
-            <List>
-                {menuItems.map(({ id, title }) => (
-                    <ListItem key={id} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={title} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
+            <Stack direction={'column'} spacing={4}>
+                {menuItems?.map(({ id, title, url }) => {
+                    return (
+                        <Link to={url}>
+                            <Typography
+                                variant="body1"
+                                key={id}
+                                fontWeight={
+                                    routeName === url
+                                        ? 700
+                                        : 400
+                                }
+                            >
+                                {title}
+                            </Typography>
+                        </Link>
+                    );
+                })}
+            </Stack>
         </Box>
     );
 
@@ -105,7 +111,7 @@ const PrimaryNavbar = (props) => {
                                     aria-label="show 4 new mails"
                                     color="inherit"
                                 >
-                                    <Badge badgeContent={4} color="info">
+                                    <Badge badgeContent={1} color="info">
                                         <img src={likeIcon} alt="like-icon" />
                                     </Badge>
                                 </IconButton>
@@ -114,7 +120,7 @@ const PrimaryNavbar = (props) => {
                                     aria-label="show 17 new notifications"
                                     color="inherit"
                                 >
-                                    <Badge badgeContent={17} color="info">
+                                    <Badge badgeContent={5} color="info">
                                         <img
                                             src={shoppingBag}
                                             alt="shopping-bag-icon"
