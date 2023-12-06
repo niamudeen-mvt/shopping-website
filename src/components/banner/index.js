@@ -5,14 +5,14 @@ import useMui from '../../hooks/useMui';
 import CustomButton from '../shared/CustomButton';
 
 const BannerSection = () => {
-    const { SM } = useMui();
+    const { SM, MD } = useMui();
     return (
         <Grid
             container
-            sx={{ minHeight: '500px', bgcolor: '#E7E5E1', padding: SM ? '0' : '0 25px' }}
+            sx={{ minHeight: '500px', bgcolor: '#E7E5E1', padding: '0 25px' }}
             className="common_margin"
         >
-            <Grid item xs={12} md={6} sx={{ padding: SM ? '0' : '25px 0' }}>
+            <Grid item xs={12} md={6} sx={{ padding: MD ? '0' : '25px 0' }}>
                 <Box
                     height="100%"
                     width="100%"

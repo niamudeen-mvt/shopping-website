@@ -153,7 +153,7 @@ const ProductPage = () => {
                                 </Box>
                                 <Stack spacing={2} sx={commonMarginStyles}>
                                     <CustomButton
-                                        width="365px"
+                                        width={SM ? "365px" : "182px"}
                                         height="40px"
                                         text={'Add to Cart'}
                                         borderRadius={'100px'}
@@ -161,7 +161,7 @@ const ProductPage = () => {
                                         fontWeight={'500px'}
                                     />
                                     <CustomButton
-                                        width="365px"
+                                        width={SM ? "365px" : "182px"}
                                         height="40px"
                                         text={'Buy it Now'}
                                         borderRadius={'100px'}

@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import React from 'react';
-import useMui from '../../hooks/useMui';
 
 const CustomButton = ({
     height = '35px',
@@ -17,13 +16,13 @@ const CustomButton = ({
     letterSpacing,
     border,
 }) => {
-    const { SM } = useMui();
+
     return (
         <Button
             variant="contained"
             sx={{
                 height: height,
-                width: SM ? width : width / 2,
+                width: width,
                 color: textColor,
                 backgroundColor: bgColor,
                 marginBottom: mb,
