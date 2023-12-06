@@ -1,19 +1,17 @@
 import { Box, Stack, Typography } from '@mui/material';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { menuItems } from '../../utils/menu-items';
 import { flexCenterStyles } from '../styling';
-
-
 import img1 from "../../assets/images/banner-overlya-img1.svg"
 import img2 from "../../assets/images/banner-watch.svg"
 import useMui from '../../hooks/useMui';
+import { routes } from '../../routes';
 
 const CustomCommonBanner = () => {
     const routeName = useLocation().pathname;
     const { MD } = useMui()
 
-    const pageTitle = menuItems.filter((menu) => menu.url === routeName)[0]
+    const pageTitle = routes.filter((menu) => menu.url === routeName)[0]
         .title;
     return (
         <Box

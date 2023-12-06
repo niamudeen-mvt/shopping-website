@@ -15,8 +15,8 @@ import shoppingBag from '../../assets/icons/shopping-bag-icon.svg';
 import MenuIcon from '@mui/icons-material/Menu';
 import CommonContainer from '../shared/container';
 import CustomDrawer from '../shared/CustomDrawer';
-import { menuItems } from '../../utils/menu-items';
 import useMui from '../../hooks/useMui';
+import { routes } from '../../routes';
 
 const PrimaryNavbar = (props) => {
     const routeName = useLocation()?.pathname;
@@ -35,7 +35,7 @@ const PrimaryNavbar = (props) => {
             sx={{ textAlign: 'center', padding: '100px 0' }}
         >
             <Stack direction={'column'} spacing={4}>
-                {menuItems?.map(({ id, title, url }) => {
+                {routes?.map(({ id, title, url }) => {
                     return (
                         <Link to={url}>
                             <Typography
@@ -73,7 +73,7 @@ const PrimaryNavbar = (props) => {
                     {isMatches ? (
                         <>
                             <Stack direction={'row'} spacing={4}>
-                                {menuItems?.map(({ id, title, url }) => {
+                                {routes?.map(({ id, title, url }) => {
                                     return (
                                         <Link to={url}>
                                             <Typography
